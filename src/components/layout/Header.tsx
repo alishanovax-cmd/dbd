@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { navLinks, siteConfig } from '../../data/navigation'
+import { BrandLogo } from '../ui/BrandLogo'
 import { Button } from '../ui/Button'
 import { DiscordIcon } from '../ui/DiscordIcon'
 
@@ -18,10 +19,11 @@ export function Header() {
       <div className="container flex h-[72px] items-center justify-between gap-4">
         <Link
           to="/"
-          className="site-logo gradient-text"
+          className="site-logo"
           onClick={() => setMenuOpen(false)}
+          aria-label="Zadeyo home"
         >
-          {siteConfig.name}
+          <BrandLogo />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">

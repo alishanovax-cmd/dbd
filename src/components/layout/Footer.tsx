@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { footerColumns, footerKeywordLinks, siteConfig } from '../../data/navigation'
+import { BrandLogo } from '../ui/BrandLogo'
 import { Button } from '../ui/Button'
 
 function FooterLink({
@@ -54,8 +55,8 @@ export function Footer() {
         <section className="site-footer__hero glass-card" aria-labelledby="footer-cta-heading">
           <div className="site-footer__hero-frame" aria-hidden="true" />
           <div className="site-footer__hero-head">
-            <Link to="/" className="site-logo gradient-text" aria-label="Zadeyo home">
-              {siteConfig.name}
+            <Link to="/" className="site-logo" aria-label="Zadeyo home">
+              <BrandLogo className="brand-logo--footer" />
             </Link>
           </div>
           <div className="site-footer__hero-grid">

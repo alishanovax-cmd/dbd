@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: 'ZADEYO',
+  logoFile: 'zadeyo-logo.png',
   fullName: 'Zadeyo DBD Cheats',
   tagline: 'ESP, Aimbot & Wallhack',
   description:

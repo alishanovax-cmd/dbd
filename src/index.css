@@ -3510,6 +3510,10 @@ ul {
 .brand-logo {
   display: block;
   width: auto;
+  height: 40px;
+}
+
+.brand-logo--footer {
   height: 32px;
 }
 

@@ -2,6 +2,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs'
 
 export const siteConfig = {
   name: 'ZADEYO',
+  logoFile: 'zadeyo-logo.png',
   fullName: 'Zadeyo DBD Cheats',
   description:
     'Zadeyo private external cheat for Dead by Daylight. World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, StreamProof. $35/month.',
@@ -218,7 +219,7 @@ function organizationSchema(siteUrl) {
     '@type': 'Organization',
     name: siteConfig.name,
     url: absoluteUrl(siteUrl, '/'),
-    logo: `${siteUrl}/favicon.svg`,
+    logo: `${siteUrl}/${siteConfig.logoFile}`,
     description: siteConfig.description,
     sameAs: [siteConfig.discordUrl],
   }
@@ -235,7 +236,7 @@ function websiteSchema(siteUrl) {
     publisher: {
       '@type': 'Organization',
       name: siteConfig.name,
-      logo: { '@type': 'ImageObject', url: `${siteUrl}/favicon.svg` },
+      logo: { '@type': 'ImageObject', url: `${siteUrl}/${siteConfig.logoFile}` },
     },
   }
 }
@@ -355,7 +356,7 @@ function articleSchema(siteUrl, article) {
     publisher: {
       '@type': 'Organization',
       name: siteConfig.name,
-      logo: { '@type': 'ImageObject', url: `${siteUrl}/favicon.svg` },
+      logo: { '@type': 'ImageObject', url: `${siteUrl}/${siteConfig.logoFile}` },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
