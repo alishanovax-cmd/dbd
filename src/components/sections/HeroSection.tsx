@@ -17,7 +17,7 @@ export function HeroSection() {
 
       <div className="container hero-section__layout">
         <div className="hero-section__split">
-          <ScrollReveal className="hero-section__copy">
+          <div className="hero-section__copy">
             <p className="hero-section__eyebrow">{heroContent.eyebrow}</p>
             <div className="hero-section__badges">
               {heroContent.badges.map((badge) => (
@@ -41,9 +41,9 @@ export function HeroSection() {
             </ul>
 
             <p className="hero-section__desc">{heroContent.description}</p>
-          </ScrollReveal>
+          </div>
 
-          <ScrollReveal className="hero-section__visual" delay={100}>
+          <div className="hero-section__visual">
             <div className="hero-visual">
               <div className="hero-visual__glow" aria-hidden="true" />
               <div className="hero-visual__frame">
@@ -73,10 +73,10 @@ export function HeroSection() {
                 <span className="hero-visual__price-period">/mo</span>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
         </div>
 
-        <ScrollReveal className="hero-section__cta" delay={160}>
+        <div className="hero-section__cta">
           <div className="hero-section__actions">
             <Button href={siteConfig.checkoutUrl} external>
               Purchase Now
@@ -89,7 +89,7 @@ export function HeroSection() {
             </Button>
           </div>
           <p className="hero-section__compat">{heroContent.compatibility}</p>
-        </ScrollReveal>
+        </div>
       </div>
 
       <a href="#why-choose" className="hero-section__scroll" aria-label="Scroll to features">

@@ -12,7 +12,6 @@ export const imageDimensions: Record<AssetKey, { width: number; height: number }
   heroHuntressPoster: { width: 736, height: 414 },
   blogExternal: { width: 1600, height: 885 },
   blogStreamproof: { width: 736, height: 414 },
-  heroVideo: { width: 1920, height: 1080 },
 }
 
 export function getImageDimensions(src: string | undefined): { width: number; height: number } {

@@ -7,7 +7,6 @@ import espWallhack from './images/dbd-esp-wallhack.jpg'
 import heroHuntressPoster from './images/hero-huntress-poster.jpg'
 import blogExternal from './images/blog-external.jpg'
 import blogStreamproof from './images/blog-streamproof.jpg'
-import heroVideo from './video/hero-dbd.mp4'
 
 const publicBase = import.meta.env.BASE_URL
 
@@ -22,7 +21,6 @@ export const assets = {
   heroHuntressPoster,
   blogExternal,
   blogStreamproof,
-  heroVideo,
 } as const
 
 export type AssetKey = keyof typeof assets

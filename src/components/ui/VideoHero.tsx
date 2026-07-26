@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { assets } from '../../assets'
+import { loadHeroVideoUrl } from '../../assets/video'
 import { imageDimensions } from '../../assets/imageDimensions'
 import { useClickToPlayVideo } from '../../hooks/useAutoplayVideo'
 import { VideoMuteButton } from './VideoMuteButton'
@@ -19,7 +20,7 @@ export function VideoHero({ className = '' }: VideoHeroProps) {
     if (!video) return
 
     if (!video.src) {
-      video.src = assets.heroVideo
+      video.src = await loadHeroVideoUrl()
     }
 
     try {
