@@ -16,9 +16,26 @@ export function InlineVideo({
   label = 'Zadeyo DBD cheat preview video',
 }: InlineVideoProps) {
   const [failed, setFailed] = useState(false)
-  const { videoRef, playing, muted, handlePlay, toggleMute, setPlaying } = useClickToPlayVideo({
+  const { videoRef, playing, muted, toggleMute, setPlaying } = useClickToPlayVideo({
     onError: () => setFailed(true),
   })
+
+  const handlePlayClick = async () => {
+    const video = videoRef.current
+    if (!video) return
+
+    if (!video.src) {
+      video.src = assets.heroVideo
+    }
+
+    try {
+      video.muted = muted
+      await video.play()
+      setPlaying(true)
+    } catch {
+      setFailed(true)
+    }
+  }
 
   return (
     <div className={`inline-video ${className}`.trim()}>
@@ -27,12 +44,11 @@ export function InlineVideo({
           <video
             ref={videoRef}
             className="inline-video__media rounded-image"
-            src={assets.heroVideo}
             poster={poster}
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="none"
             aria-label={label}
             onPlay={() => setPlaying(true)}
             onPause={() => setPlaying(false)}
@@ -43,7 +59,7 @@ export function InlineVideo({
             <button
               type="button"
               className="inline-video__play"
-              onClick={handlePlay}
+              onClick={handlePlayClick}
               aria-label="Play video"
             >
               <span className="inline-video__play-icon" aria-hidden="true">

@@ -10,9 +10,26 @@ interface VideoHeroProps {
 
 export function VideoHero({ className = '' }: VideoHeroProps) {
   const [failed, setFailed] = useState(false)
-  const { videoRef, playing, muted, handlePlay, toggleMute, setPlaying } = useClickToPlayVideo({
+  const { videoRef, playing, muted, toggleMute, setPlaying } = useClickToPlayVideo({
     onError: () => setFailed(true),
   })
+
+  const handlePlayClick = async () => {
+    const video = videoRef.current
+    if (!video) return
+
+    if (!video.src) {
+      video.src = assets.heroVideo
+    }
+
+    try {
+      video.muted = muted
+      await video.play()
+      setPlaying(true)
+    } catch {
+      setFailed(true)
+    }
+  }
 
   return (
     <div className={`video-hero ${className}`.trim()}>
@@ -21,12 +38,11 @@ export function VideoHero({ className = '' }: VideoHeroProps) {
           <video
             ref={videoRef}
             className="video-hero__media"
-            src={assets.heroVideo}
             poster={assets.atmosphere1}
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="none"
             aria-label="Zadeyo DBD cheat preview video"
             onPlay={() => setPlaying(true)}
             onPause={() => setPlaying(false)}
@@ -39,7 +55,7 @@ export function VideoHero({ className = '' }: VideoHeroProps) {
             <button
               type="button"
               className="video-hero__play"
-              onClick={handlePlay}
+              onClick={handlePlayClick}
               aria-label="Play video"
             >
               <span className="video-hero__play-icon" aria-hidden="true">

@@ -56,6 +56,8 @@ export function HeroSection() {
                   alt="Zadeyo DBD cheat menu — ESP, wallhack, and exploit overlay"
                   className="hero-visual__image"
                   loading="eager"
+                  decoding="sync"
+                  fetchPriority="high"
                   width={imageDimensions.cheatMenu.width}
                   height={imageDimensions.cheatMenu.height}
                 />

@@ -11,9 +11,9 @@
   "lang": "en-US",
   "icons": [
     {
-      "src": "zadeyo-logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "src": "zadeyo-logo.webp",
+      "sizes": "128x128",
+      "type": "image/webp",
       "purpose": "any"
     }
   ]

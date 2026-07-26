@@ -2,7 +2,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs'
 
 export const siteConfig = {
   name: 'ZADEYO',
-  logoFile: 'zadeyo-logo.png',
+  logoFile: 'zadeyo-logo.webp',
   fullName: 'Zadeyo DBD Cheats',
   description:
     'Zadeyo private external cheat for Dead by Daylight. World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, StreamProof. $35/month.',

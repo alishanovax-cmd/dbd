@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.github.io/dbd/sitemap.xml
+Sitemap: https://dbdcheats.net/sitemap.xml
