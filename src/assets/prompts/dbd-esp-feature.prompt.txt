@@ -1,0 +1,4 @@
+Dead by Daylight gameplay screenshot style, survivor characters on dark map
+with bright green 2D bounding boxes and snap lines through walls (ESP overlay),
+Foggy Nightingale map atmosphere, purple UI accent glow, cinematic wide shot,
+no real UI logos, 16:9

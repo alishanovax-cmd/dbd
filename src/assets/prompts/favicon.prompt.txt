@@ -1,0 +1,2 @@
+Minimal flat app icon, bold letters DBD in condensed sans-serif,
+purple #a855f7 on dark background #060409, gaming logo style, square 512px, no gradient

@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "Zadeyo DBD Cheats",
+  "short_name": "Zadeyo DBD",
+  "description": "Zadeyo external DBD cheat — ESP, exploits, spoofer, unlocker, and StreamProof.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#060409",
+  "theme_color": "#060409",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

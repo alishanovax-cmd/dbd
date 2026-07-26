@@ -1,0 +1,3 @@
+Dead by Daylight map overview with ESP highlights on generators (yellow),
+exit gates (green), totems (red), and chests (blue) through walls,
+dark foggy environment, overlay labels visible, horror game aesthetic, 16:9
