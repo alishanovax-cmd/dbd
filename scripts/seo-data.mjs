@@ -168,7 +168,7 @@ export const articlePages = [
 }))
 
 export function getSiteUrl() {
-  return (process.env.VITE_SITE_URL ?? process.env.SITE_URL ?? 'https://example.github.io/dbd').replace(/\/$/, '')
+  return (process.env.VITE_SITE_URL ?? process.env.SITE_URL ?? 'https://dbdcheats.net').replace(/\/$/, '')
 }
 
 export function canonicalFor(siteUrl, path) {

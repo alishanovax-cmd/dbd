@@ -28,7 +28,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          VITE_SITE_URL: ${{ vars.VITE_SITE_URL || format('https://{0}.github.io/dbd', github.repository_owner) }}
+          VITE_SITE_URL: ${{ vars.VITE_SITE_URL || 'https://dbdcheats.net' }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
