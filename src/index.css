@@ -3662,8 +3662,23 @@ ul {
 .site-footer__hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(1.75rem, 3.5vw, 2.5rem);
+  padding: clamp(1rem, 2vw, 1.35rem) clamp(1.75rem, 3.5vw, 2.5rem)
+    clamp(1.75rem, 3.5vw, 2.5rem);
   border-radius: var(--radius-xl);
+}
+
+.site-footer__hero-head {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 0 0.85rem;
+}
+
+.site-footer__hero-head .site-logo {
+  margin: 0;
 }
 
 .site-footer__hero-frame {
@@ -3691,26 +3706,23 @@ ul {
 
 .site-footer__hero-grid {
   position: relative;
+  z-index: 1;
+  width: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.9fr);
   gap: clamp(1.5rem, 3vw, 2.5rem);
-  align-items: center;
+  align-items: start;
 }
 
-.site-footer__brand {
-  display: inline-block;
-  margin: 0.25rem 0 0.35rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.65rem, 4vw, 2.75rem);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: var(--text-primary);
-  transition: color var(--transition-base);
+.site-footer__hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
 }
 
-.site-footer__brand:hover {
-  color: var(--accent-bright);
+.site-footer__eyebrow {
+  margin: 0 0 0.85rem;
 }
 
 .site-footer__tagline {

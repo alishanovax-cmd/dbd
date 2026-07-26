@@ -53,12 +53,14 @@ export function Footer() {
       <div className="container site-footer__inner">
         <section className="site-footer__hero glass-card" aria-labelledby="footer-cta-heading">
           <div className="site-footer__hero-frame" aria-hidden="true" />
+          <div className="site-footer__hero-head">
+            <Link to="/" className="site-logo gradient-text" aria-label="Zadeyo home">
+              {siteConfig.name}
+            </Link>
+          </div>
           <div className="site-footer__hero-grid">
             <div className="site-footer__hero-copy">
-              <span className="section-label">Dead by Daylight · Private External Cheat</span>
-              <Link to="/" className="site-footer__brand font-display">
-                {siteConfig.name}
-              </Link>
+              <span className="section-label site-footer__eyebrow">Dead by Daylight · Private External Cheat</span>
               <h2 id="footer-cta-heading" className="site-footer__tagline gradient-text">
                 {siteConfig.tagline} for DBD
               </h2>
