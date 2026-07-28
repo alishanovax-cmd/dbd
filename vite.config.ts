@@ -8,6 +8,7 @@ export default defineConfig({
   base: '/',
   plugins: [react(), tailwindcss()],
   build: {
+    modulePreload: false,
     rollupOptions: {
       output: {
         manualChunks(id) {
