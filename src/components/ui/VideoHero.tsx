@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { assets } from '../../assets'
-import { loadHeroVideoUrl } from '../../assets/video'
+import { hasHeroVideo, loadHeroVideoUrl } from '../../assets/video'
 import { imageDimensions } from '../../assets/imageDimensions'
 import { useClickToPlayVideo } from '../../hooks/useAutoplayVideo'
 import { VideoMuteButton } from './VideoMuteButton'
@@ -10,6 +10,7 @@ interface VideoHeroProps {
 }
 
 export function VideoHero({ className = '' }: VideoHeroProps) {
+  const videoEnabled = hasHeroVideo()
   const [failed, setFailed] = useState(false)
   const { videoRef, playing, muted, toggleMute, setPlaying } = useClickToPlayVideo({
     onError: () => setFailed(true),
@@ -20,7 +21,12 @@ export function VideoHero({ className = '' }: VideoHeroProps) {
     if (!video) return
 
     if (!video.src) {
-      video.src = await loadHeroVideoUrl()
+      const url = await loadHeroVideoUrl()
+      if (!url) {
+        setFailed(true)
+        return
+      }
+      video.src = url
     }
 
     try {
@@ -34,7 +40,15 @@ export function VideoHero({ className = '' }: VideoHeroProps) {
 
   return (
     <div className={`video-hero ${className}`.trim()}>
-      {!failed ? (
+      {!videoEnabled || failed ? (
+        <img
+          src={assets.atmosphere1}
+          alt="Dead by Daylight atmospheric scene"
+          className="video-hero__media"
+          width={imageDimensions.atmosphere1.width}
+          height={imageDimensions.atmosphere1.height}
+        />
+      ) : (
         <>
           <video
             ref={videoRef}
@@ -66,14 +80,6 @@ export function VideoHero({ className = '' }: VideoHeroProps) {
             </button>
           )}
         </>
-      ) : (
-        <img
-          src={assets.atmosphere1}
-          alt="Dead by Daylight atmospheric scene"
-          className="video-hero__media"
-          width={imageDimensions.atmosphere1.width}
-          height={imageDimensions.atmosphere1.height}
-        />
       )}
       <div className="video-hero__overlay" aria-hidden="true" />
       <div className="video-hero__vignette" aria-hidden="true" />

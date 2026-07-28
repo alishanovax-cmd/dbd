@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Large local media — never deploy to Cloudflare (25 MiB asset limit)
+public/hero-dbd.mp4
+src/assets/video/*.mp4
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { assets } from '../../assets'
-import { loadHeroVideoUrl } from '../../assets/video'
+import { hasHeroVideo, loadHeroVideoUrl } from '../../assets/video'
 import { getImageDimensions } from '../../assets/imageDimensions'
 import { useClickToPlayVideo } from '../../hooks/useAutoplayVideo'
 import { VideoMuteButton } from './VideoMuteButton'
@@ -16,6 +16,7 @@ export function InlineVideo({
   poster = assets.atmosphere1,
   label = 'Zadeyo DBD cheat preview video',
 }: InlineVideoProps) {
+  const videoEnabled = hasHeroVideo()
   const [failed, setFailed] = useState(false)
   const { videoRef, playing, muted, toggleMute, setPlaying } = useClickToPlayVideo({
     onError: () => setFailed(true),
@@ -26,7 +27,12 @@ export function InlineVideo({
     if (!video) return
 
     if (!video.src) {
-      video.src = await loadHeroVideoUrl()
+      const url = await loadHeroVideoUrl()
+      if (!url) {
+        setFailed(true)
+        return
+      }
+      video.src = url
     }
 
     try {
@@ -40,7 +46,16 @@ export function InlineVideo({
 
   return (
     <div className={`inline-video ${className}`.trim()}>
-      {!failed ? (
+      {!videoEnabled || failed ? (
+        <img
+          src={poster}
+          alt={label}
+          className="inline-video__media rounded-image"
+          loading="lazy"
+          width={getImageDimensions(poster).width}
+          height={getImageDimensions(poster).height}
+        />
+      ) : (
         <>
           <video
             ref={videoRef}
@@ -70,15 +85,6 @@ export function InlineVideo({
             </button>
           )}
         </>
-      ) : (
-        <img
-          src={poster}
-          alt={label}
-          className="inline-video__media rounded-image"
-          loading="lazy"
-          width={getImageDimensions(poster).width}
-          height={getImageDimensions(poster).height}
-        />
       )}
       <div className="inline-video__overlay" aria-hidden="true" />
     </div>
