@@ -7,6 +7,7 @@ import { articleSchema, breadcrumbSchema, globalSchemas, webPageSchema } from '.
 import { Button } from '../components/ui/Button'
 import { ScrollReveal } from '../components/ui/ScrollReveal'
 import { SectionHeading } from '../components/ui/SectionHeading'
+import { ShareButtons } from '../components/ui/ShareButtons'
 import { getBlogArticle, blogPosts } from '../data/blogArticles'
 import { siteConfig } from '../data/navigation'
 import { blogArticleSeo, pageSeo } from '../data/seo'
@@ -71,6 +72,7 @@ export function BlogArticlePage() {
             <p className="blog-article__meta">
               {post.date} · {post.readTime}
             </p>
+            <ShareButtons title={post.title} label="Share this guide" className="blog-article__share" />
           </ScrollReveal>
 
           <ScrollReveal delay={80}>

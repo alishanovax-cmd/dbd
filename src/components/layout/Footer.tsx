@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { footerColumns, footerKeywordLinks, siteConfig } from '../../data/navigation'
 import { BrandLogo } from '../ui/BrandLogo'
 import { Button } from '../ui/Button'
+import { ShareButtons } from '../ui/ShareButtons'
 
 function FooterLink({
   href,
@@ -170,6 +171,8 @@ export function Footer() {
             <Link to="/faq">FAQ</Link> for limitations.
           </p>
         </div>
+
+        <ShareButtons label="Share this page" compact className="site-footer__share" />
 
         <div className="site-footer__bar">
           <p className="site-footer__updated">

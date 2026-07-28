@@ -5,6 +5,7 @@ import { siteConfig } from '../../data/navigation'
 import { HeroBackground } from '../ui/HeroBackground'
 import { Badge } from '../ui/Badge'
 import { Button } from '../ui/Button'
+import { ShareButtons } from '../ui/ShareButtons'
 import { ScrollReveal } from '../ui/ScrollReveal'
 import { SectionHeading } from '../ui/SectionHeading'
 
@@ -89,6 +90,7 @@ export function HeroSection() {
             </Button>
           </div>
           <p className="hero-section__compat">{heroContent.compatibility}</p>
+          <ShareButtons label="Share Zadeyo DBD Cheats" compact className="hero-section__share" />
         </div>
       </div>
 
