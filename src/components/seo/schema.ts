@@ -182,7 +182,7 @@ export function organizationSchema() {
     url: absoluteUrl('/'),
     logo: logoUrl,
     description: siteConfig.description,
-    sameAs: [siteConfig.discordUrl],
+    sameAs: [siteConfig.discordUrl, siteConfig.zadeyoUrl, siteConfig.githubUrl],
   }
 }
 

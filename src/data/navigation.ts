@@ -8,8 +8,23 @@ export const siteConfig = {
   discordUrl: 'https://discord.gg/zadeyo',
   supportUrl: 'https://zadeyo.com/support',
   checkoutUrl: 'https://zadeyo.com/go/ALEXA?to=%2Fproducts%2Fdbd',
+  zadeyoUrl: 'https://zadeyo.com',
+  liveUrl: 'https://dbdcheats.net',
+  githubUrl: 'https://github.com/alishanovax-cmd/dbd',
   lastUpdated: 'July 24, 2026',
 } as const
+
+/** Authoritative outbound links — shown in footer and static HTML for crawlers. */
+export const officialExternalLinks = [
+  { label: 'Zadeyo Official Store', href: siteConfig.zadeyoUrl },
+  { label: 'Zadeyo DBD Product Page', href: siteConfig.checkoutUrl },
+  { label: 'Zadeyo Support Portal', href: siteConfig.supportUrl },
+  { label: 'Zadeyo Discord Community', href: siteConfig.discordUrl },
+  { label: 'Dead by Daylight Official Site', href: 'https://deadbydaylight.com' },
+  { label: 'DBD on Steam', href: 'https://store.steampowered.com/app/381210/Dead_by_Daylight/' },
+  { label: 'Behaviour Interactive', href: 'https://www.behaviour.com/en' },
+  { label: 'Site Source on GitHub', href: siteConfig.githubUrl },
+] as const
 
 export const navLinks = [
   { label: 'Home', href: '/' },

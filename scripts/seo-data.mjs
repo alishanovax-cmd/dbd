@@ -9,6 +9,9 @@ export const siteConfig = {
   discordUrl: 'https://discord.gg/zadeyo',
   supportUrl: 'https://zadeyo.com/support',
   checkoutUrl: 'https://zadeyo.com/go/ALEXA?to=%2Fproducts%2Fdbd',
+  zadeyoUrl: 'https://zadeyo.com',
+  liveUrl: 'https://dbdcheats.net',
+  githubUrl: 'https://github.com/alishanovax-cmd/dbd',
   lastUpdated: '2026-07-24',
 }
 
@@ -221,7 +224,7 @@ function organizationSchema(siteUrl) {
     url: absoluteUrl(siteUrl, '/'),
     logo: `${siteUrl}/${siteConfig.logoFile}`,
     description: siteConfig.description,
-    sameAs: [siteConfig.discordUrl],
+    sameAs: [siteConfig.discordUrl, siteConfig.zadeyoUrl, siteConfig.githubUrl],
   }
 }
 

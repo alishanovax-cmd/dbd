@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { footerColumns, footerKeywordLinks, siteConfig } from '../../data/navigation'
+import { footerColumns, footerKeywordLinks, officialExternalLinks, siteConfig } from '../../data/navigation'
 import { BrandLogo } from '../ui/BrandLogo'
 import { Button } from '../ui/Button'
 import { ShareButtons } from '../ui/ShareButtons'
@@ -121,6 +121,24 @@ export function Footer() {
           </ul>
         </nav>
 
+        <nav className="site-footer__external" aria-label="Official external resources">
+          <span className="site-footer__keywords-label">Official resources</span>
+          <ul className="site-footer__keywords-list">
+            {officialExternalLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="site-footer__keyword-pill"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         <div className="site-footer__columns">
           {Object.values(footerColumns).map((column) => (
             <nav
@@ -151,9 +169,13 @@ export function Footer() {
         <div className="site-footer__trust glass-card">
           <p className="site-footer__trust-main">
             <strong>Zadeyo DBD Cheats</strong> — independent resource for Dead by Daylight external cheat
-            features, setup guides, and pricing. Purchases and refunds are handled on{' '}
-            <a href={siteConfig.checkoutUrl} target="_blank" rel="noopener noreferrer">
+            features, setup guides, and pricing.             Purchases and refunds are handled on{' '}
+            <a href={siteConfig.zadeyoUrl} target="_blank" rel="noopener noreferrer">
               zadeyo.com
+            </a>{' '}
+            via the{' '}
+            <a href={siteConfig.checkoutUrl} target="_blank" rel="noopener noreferrer">
+              official DBD product page
             </a>
             . Support via{' '}
             <a href={siteConfig.discordUrl} target="_blank" rel="noopener noreferrer">

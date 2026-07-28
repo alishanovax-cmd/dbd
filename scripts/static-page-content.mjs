@@ -29,9 +29,14 @@ const keywordLinks = [
 ]
 
 const externalLinks = [
-  { href: siteConfig.checkoutUrl, label: 'Buy on Zadeyo Store' },
+  { href: siteConfig.zadeyoUrl, label: 'Zadeyo Official Store' },
+  { href: siteConfig.checkoutUrl, label: 'Zadeyo DBD Product Page' },
   { href: siteConfig.supportUrl, label: 'Zadeyo Support Portal' },
-  { href: siteConfig.discordUrl, label: 'Zadeyo Discord' },
+  { href: siteConfig.discordUrl, label: 'Zadeyo Discord Community' },
+  { href: 'https://deadbydaylight.com', label: 'Dead by Daylight Official Site' },
+  { href: 'https://store.steampowered.com/app/381210/Dead_by_Daylight/', label: 'DBD on Steam' },
+  { href: 'https://www.behaviour.com/en', label: 'Behaviour Interactive' },
+  { href: siteConfig.githubUrl, label: 'Site Source on GitHub' },
 ]
 
 function escapeHtml(value) {
@@ -114,7 +119,7 @@ function staticExploreHtml(currentPath) {
             <ul>${topicLinks}</ul>
           </section>
           <section>
-            <h3>Official Zadeyo links</h3>
+            <h3>Official external resources</h3>
             <ul>${outboundLinks}</ul>
           </section>
         </div>
@@ -169,7 +174,7 @@ function homeStaticHtml(route) {
   const article = wrapArticle(
     'Dead By Daylight Cheats — ESP, Aimbot & Wallhack for DBD',
     [
-      `Premium Zadeyo external cheat with World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof. Undetected external architecture with instant loader delivery at $35/month. Browse the ${link('/cheats', 'full cheat module list')} or see ${link('/buy', 'pricing and requirements')}.`,
+      `Premium Zadeyo external cheat with World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof. Undetected external architecture with instant loader delivery at $35/month on ${link(siteConfig.zadeyoUrl, 'Zadeyo', true)}. Browse the ${link('/cheats', 'full cheat module list')} or see ${link('/buy', 'pricing and requirements')}.`,
       `Zadeyo DBD is built for players who want full wallhack coverage, exploit modules, and unlock tools in one private loader. Compatible with Steam, Epic Games, and Game Pass on Windows 10 and 11. Read the ${link('/faq', 'FAQ')} or start with the ${link('/blog/dbd-esp-guide', 'ESP setup guide')}.`,
     ],
     [
