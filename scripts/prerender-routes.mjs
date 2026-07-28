@@ -11,6 +11,7 @@ import {
   resolveBuiltAssetUrl,
   siteConfig,
 } from './seo-data.mjs'
+import { buildStaticBody } from './static-page-content.mjs'
 
 const siteUrl = getSiteUrl()
 
@@ -109,6 +110,7 @@ function injectSeo(html, route) {
     '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
     `<meta name="viewport" content="width=device-width, initial-scale=1.0" />${seoBlock}`,
   )
+  output = output.replace('<!--PRERENDER_BODY-->', buildStaticBody(route))
   return output
 }
 

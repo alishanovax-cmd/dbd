@@ -25,49 +25,42 @@
     <meta name="twitter:description" content="Zadeyo external DBD cheat — World ESP, Box ESP, Auto Skill Check, HWID Spoofer & StreamProof. Features, pricing, and setup guides." />
     <meta name="twitter:image" content="%BASE_URL%og-image.jpg" />
     <style>
-      #static-hero {
+      .static-page-content {
         background: #060409;
-        min-height: 100vh;
-        padding: 88px 1rem 2rem;
         color: #f5f0ff;
+        padding: 88px 1rem 2rem;
+        max-width: 760px;
+        margin: 0 auto;
+        font: 400 0.95rem/1.7 "DM Sans", Arial, sans-serif;
       }
-      #static-hero h1 {
-        margin: 0 0 0.5rem;
-        font: 800 clamp(1.75rem, 5vw, 2.75rem) "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+      .static-page-content h1 {
+        margin: 0 0 1rem;
+        font: 800 clamp(1.75rem, 5vw, 2.5rem) "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
         letter-spacing: 0.02em;
         text-transform: uppercase;
         color: #c084fc;
       }
-      #static-hero p {
-        margin: 0 0 1.25rem;
-        font: 400 0.95rem "DM Sans", Arial, sans-serif;
+      .static-page-content h2 {
+        margin: 1.5rem 0 0.75rem;
+        font: 800 1.35rem "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+        color: #e9d5ff;
+      }
+      .static-page-content p {
+        margin: 0 0 1rem;
         color: #b8b0c8;
       }
-      #static-hero img {
+      .static-page-content img {
         display: block;
         width: min(100%, 720px);
         height: auto;
-        margin: 0 auto;
+        margin: 1rem auto 1.5rem;
         border-radius: 12px;
       }
     </style>
     <title>Zadeyo DBD Cheats — Features & Pricing | ZADEYO</title>
   </head>
   <body>
-    <div id="root">
-      <div id="static-hero" aria-hidden="true">
-        <h1>Dead By Daylight Cheats</h1>
-        <p>ESP, Aimbot &amp; Wallhack for DBD</p>
-        <img
-          src="%BASE_URL%hero-cheat-menu.webp"
-          alt="Zadeyo DBD cheat menu — ESP, wallhack, and exploit overlay"
-          width="1200"
-          height="503"
-          fetchpriority="high"
-          decoding="sync"
-        />
-      </div>
-    </div>
+    <div id="root"><!--PRERENDER_BODY--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
