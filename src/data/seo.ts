@@ -74,7 +74,7 @@ export const pageSeo = {
   home: {
     title: 'Zadeyo DBD Cheats — Features & Pricing | ZADEYO',
     description:
-      'Zadeyo external DBD cheat with World ESP, Box ESP, Auto Skill Check, HWID Spoofer, Cosmetic Unlocker, and StreamProof. See features, compatibility, pricing, and setup guides.',
+      'Zadeyo external DBD cheat — World ESP, Box ESP, Auto Skill Check, HWID Spoofer & StreamProof. Features, pricing, and setup guides.',
     path: '/',
     type: 'website',
   },
