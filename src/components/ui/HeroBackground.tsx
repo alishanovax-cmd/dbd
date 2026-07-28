@@ -1,17 +1,17 @@
-import { assets } from '../../assets'
-import { imageDimensions } from '../../assets/imageDimensions'
+const publicBase = import.meta.env.BASE_URL
 
 export function HeroBackground() {
   return (
     <div className="hero-section__bg" aria-hidden="true">
       <img
         className="hero-section__bg-media"
-        src={assets.heroHuntressPoster}
+        src={`${publicBase}hero-poster.webp`}
         alt=""
-        width={imageDimensions.heroHuntressPoster.width}
-        height={imageDimensions.heroHuntressPoster.height}
+        width={1280}
+        height={720}
         decoding="async"
         fetchPriority="low"
+        loading="eager"
       />
       <div className="hero-section__bg-overlay" />
       <div className="hero-section__bg-vignette" />

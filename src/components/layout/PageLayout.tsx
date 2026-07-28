@@ -1,8 +1,9 @@
-import type { ReactNode } from 'react'
+import { lazy, Suspense, type ReactNode } from 'react'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { CreativeBackdrop } from '../ui/CreativeBackdrop'
-import { Footer } from './Footer'
 import { Header } from './Header'
+
+const Footer = lazy(() => import('./Footer').then((m) => ({ default: m.Footer })))
 
 interface PageLayoutProps {
   children: ReactNode
@@ -21,7 +22,9 @@ export function PageLayout({ children }: PageLayoutProps) {
       <main id="main-content" className="page-shell">
         {children}
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </>
   )
 }

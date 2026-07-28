@@ -27,6 +27,12 @@ async function optimize() {
     .webp({ quality: 85 })
     .toFile(join(root, 'public/zadeyo-logo.webp'))
 
+  const posterSrc = join(root, 'src/assets/images/hero-huntress-poster.jpg')
+  await sharp(posterSrc)
+    .resize(1280, null, { withoutEnlargement: true })
+    .webp({ quality: 78, effort: 6 })
+    .toFile(join(root, 'public/hero-poster.webp'))
+
   const supportSrc = join(root, 'src/assets/images/dbd-support-hunt.jpg')
   const supportWebp = join(root, 'src/assets/images/dbd-support-hunt.webp')
   await sharp(supportSrc)
