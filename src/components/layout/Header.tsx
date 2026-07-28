@@ -10,10 +10,10 @@ export function Header() {
 
   return (
     <header
-      className="site-header fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md"
+      className="site-header fixed inset-x-0 top-0 z-50 border-b"
       style={{
         borderColor: 'var(--border-ghost)',
-        background: '#060409cc',
+        background: '#060409ee',
       }}
     >
       <div className="container flex h-[72px] items-center justify-between gap-4">

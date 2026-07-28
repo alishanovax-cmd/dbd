@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/copy-og-image.mjs && vite",
-    "build": "node scripts/copy-og-image.mjs && node scripts/optimize-images.mjs && tsc -b && vite build && node scripts/generate-sitemap.mjs && node scripts/prerender-routes.mjs && node scripts/copy-404.mjs",
+    "build": "node scripts/copy-og-image.mjs && node scripts/copy-hero-video.mjs && node scripts/optimize-images.mjs && tsc -b && vite build && node scripts/generate-sitemap.mjs && node scripts/prerender-routes.mjs && node scripts/copy-404.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
     "lint": "oxlint",
     "preview": "vite preview",

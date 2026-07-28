@@ -1,9 +1,5 @@
-let heroVideoUrl: string | null = null
+const publicBase = import.meta.env.BASE_URL
 
-export async function loadHeroVideoUrl(): Promise<string> {
-  if (!heroVideoUrl) {
-    const module = await import('./video/hero-dbd.mp4')
-    heroVideoUrl = module.default
-  }
-  return heroVideoUrl
+export function loadHeroVideoUrl(): Promise<string> {
+  return Promise.resolve(`${publicBase}hero-dbd.mp4`)
 }

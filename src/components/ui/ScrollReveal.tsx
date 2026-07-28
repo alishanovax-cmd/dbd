@@ -6,10 +6,7 @@ interface ScrollRevealProps {
   delay?: number
 }
 
-export function ScrollReveal({ children, className = '', delay = 0 }: ScrollRevealProps) {
-  return (
-    <div className={`reveal ${className}`.trim()} style={{ transitionDelay: `${delay}ms` }}>
-      {children}
-    </div>
-  )
+/** Renders immediately — no scroll-triggered hide/show delay. */
+export function ScrollReveal({ children, className = '' }: ScrollRevealProps) {
+  return <div className={className.trim()}>{children}</div>
 }

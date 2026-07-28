@@ -565,6 +565,27 @@ ul {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-section__glow,
+  .hero-section__ambient,
+  .creative-backdrop__mesh,
+  .site-footer__glow,
+  .site-footer__grid,
+  .features-stack__bg-text {
+    display: none;
+  }
+
+  .hero-visual__glow,
+  .features-stack__video-glow {
+    filter: none;
+  }
+
+  .hero-visual__scan,
+  .features-stack__video-scan {
+    animation: none;
+  }
+}
+
 /* ── Homepage ── */
 
 .body-text {
