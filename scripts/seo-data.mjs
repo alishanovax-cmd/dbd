@@ -15,7 +15,7 @@ export const siteConfig = {
 export const staticPages = [
   {
     path: '/',
-    title: 'Zadeyo DBD Cheats: Features, Compatibility and Pricing | ZADEYO',
+    title: 'Zadeyo DBD Cheats — Features & Pricing | ZADEYO',
     description:
       'Zadeyo external DBD cheat with World ESP, Box ESP, Auto Skill Check, HWID Spoofer, Cosmetic Unlocker, and StreamProof. See features, compatibility, pricing, and setup guides.',
     type: 'website',
