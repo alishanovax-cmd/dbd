@@ -190,9 +190,11 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: siteConfig.fullName,
+    name: 'DBD Cheats',
+    alternateName: siteConfig.fullName,
     url: absoluteUrl('/'),
-    description: siteConfig.description,
+    description:
+      'DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check and HWID spoofer.',
     inLanguage: 'en-US',
     publisher: {
       '@type': 'Organization',

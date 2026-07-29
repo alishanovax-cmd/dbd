@@ -4,6 +4,7 @@ export const siteConfig = {
   name: 'ZADEYO',
   logoFile: 'zadeyo-logo.webp',
   fullName: 'Zadeyo DBD Cheats',
+  seoSiteName: 'DBD Cheats',
   description:
     'Zadeyo private external cheat for Dead by Daylight. World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, StreamProof. $35/month.',
   discordUrl: 'https://discord.gg/zadeyo',
@@ -235,9 +236,11 @@ function websiteSchema(siteUrl) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: siteConfig.fullName,
+    name: siteConfig.seoSiteName,
+    alternateName: siteConfig.fullName,
     url: absoluteUrl(siteUrl, '/'),
-    description: siteConfig.description,
+    description:
+      'DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check and HWID spoofer.',
     inLanguage: 'en-US',
     publisher: {
       '@type': 'Organization',

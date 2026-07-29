@@ -1,4 +1,4 @@
-import { mkdirSync } from 'node:fs'
+import { existsSync, mkdirSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
@@ -22,10 +22,21 @@ async function optimize() {
     .webp({ quality: 82, effort: 6 })
     .toFile(cheatMenuAssetWebp)
 
-  await sharp(join(root, 'public/zadeyo-logo.png'))
-    .resize(128, 128, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-    .webp({ quality: 85 })
-    .toFile(join(root, 'public/zadeyo-logo.webp'))
+  const logoPng = join(root, 'public/zadeyo-logo.png')
+  if (existsSync(logoPng)) {
+    await sharp(logoPng)
+      .resize(128, 128, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .webp({ quality: 85 })
+      .toFile(join(root, 'public/zadeyo-logo.webp'))
+  }
+
+  const logoWebp = join(root, 'public/zadeyo-logo.webp')
+  if (existsSync(logoWebp)) {
+    await sharp(logoWebp).resize(48, 48).png().toFile(join(root, 'public/favicon-48.png'))
+    await sharp(logoWebp).resize(48, 48).png().toFile(join(root, 'public/favicon.ico'))
+    await sharp(logoWebp).resize(180, 180).png().toFile(join(root, 'public/apple-touch-icon.png'))
+    console.log('Generated favicon-48.png and favicon.ico for Google Search')
+  }
 
   const posterSrc = join(root, 'src/assets/images/hero-huntress-poster.jpg')
   await sharp(posterSrc)
