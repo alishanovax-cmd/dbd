@@ -17,9 +17,18 @@ function getSiteOrigin(): string {
 export const siteBasePath = import.meta.env.BASE_URL.replace(/\/$/, '')
 
 export const defaultOgImagePath = `${import.meta.env.BASE_URL}og-image.jpg`
+export const siteLogoPath = `${import.meta.env.BASE_URL}zadeyo-logo.webp`
 
 /** Must match public/og-image.jpg pixel dimensions (see scripts/copy-og-image.mjs). */
 export const ogImageDimensions = { width: 1025, height: 1300 } as const
+export const logoDimensions = { width: 128, height: 128 } as const
+
+export const homeSeo = {
+  title: 'DBD Cheats - Aimbot, ESP and Wallhack',
+  description:
+    'DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check & HWID spoofer. External cheat from $35/month with setup guides.',
+  siteName: 'DBD Cheats',
+} as const
 
 export function absoluteUrl(path: string): string {
   const origin = getSiteOrigin()
@@ -72,11 +81,11 @@ function parseArticleDate(dateStr: string): string {
 /** Handbook §22–23: unique title + meta description per indexable page. */
 export const pageSeo = {
   home: {
-    title: 'Zadeyo DBD Cheats — Features & Pricing | ZADEYO',
-    description:
-      'Zadeyo external DBD cheat — World ESP, Box ESP, Auto Skill Check, HWID Spoofer & StreamProof. Features, pricing, and setup guides.',
+    title: homeSeo.title,
+    description: homeSeo.description,
     path: '/',
     type: 'website',
+    image: siteLogoPath,
   },
   buy: {
     title: 'Buy Zadeyo DBD Cheat — Pricing, Features and Requirements | ZADEYO',

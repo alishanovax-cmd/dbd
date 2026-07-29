@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Zadeyo DBD Cheats",
-  "short_name": "Zadeyo DBD",
-  "description": "Zadeyo external DBD cheat — ESP, exploits, spoofer, unlocker, and StreamProof.",
+  "name": "DBD Cheats",
+  "short_name": "DBD Cheats",
+  "description": "DBD cheats — aimbot, ESP, wallhack, and external cheat modules for Dead by Daylight.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

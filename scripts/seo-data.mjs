@@ -18,12 +18,15 @@ export const siteConfig = {
 export const staticPages = [
   {
     path: '/',
-    title: 'Zadeyo DBD Cheats — Features & Pricing | ZADEYO',
+    title: 'DBD Cheats - Aimbot, ESP and Wallhack',
     description:
-      'Zadeyo external DBD cheat — World ESP, Box ESP, Auto Skill Check, HWID Spoofer & StreamProof. Features, pricing, and setup guides.',
+      'DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check & HWID spoofer. External cheat from $35/month with setup guides.',
     type: 'website',
     priority: '1.0',
     changefreq: 'weekly',
+    siteName: 'DBD Cheats',
+    ogImage: 'zadeyo-logo.webp',
+    ogImageDimensions: { width: 128, height: 128 },
   },
   {
     path: '/cheats',

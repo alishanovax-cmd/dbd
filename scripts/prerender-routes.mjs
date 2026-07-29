@@ -45,6 +45,9 @@ function stripSeoTags(html) {
 }
 
 function routeImage(route) {
+  if (route.ogImage) {
+    return `${siteUrl}/${route.ogImage}`
+  }
   if (route.type === 'article' && route.slug) {
     return resolveBuiltAssetUrl(siteUrl, articleImagePrefixes[route.slug])
   }
@@ -52,6 +55,9 @@ function routeImage(route) {
 }
 
 function routeOgDimensions(route) {
+  if (route.ogImageDimensions) {
+    return route.ogImageDimensions
+  }
   if (route.type === 'article' && route.slug) {
     const prefix = articleImagePrefixes[route.slug]
     if (prefix && builtAssetDimensions[prefix]) {
@@ -89,7 +95,7 @@ function injectSeo(html, route) {
     <meta property="og:description" content="${escapeAttr(route.description)}" />
     <meta property="og:type" content="${ogType}" />
     <meta property="og:url" content="${escapeAttr(canonical)}" />
-    <meta property="og:site_name" content="Zadeyo DBD Cheats" />
+    <meta property="og:site_name" content="${escapeAttr(route.siteName ?? 'Zadeyo DBD Cheats')}" />
     <meta property="og:image" content="${escapeAttr(image)}" />
     <meta property="og:image:alt" content="${escapeAttr(route.title)}" />
     <meta property="og:image:width" content="${imageDimensionsForRoute.width}" />

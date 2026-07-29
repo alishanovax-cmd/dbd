@@ -172,9 +172,9 @@ function wrapArticle(title, intro, sections, heroImage) {
 
 function homeStaticHtml(route) {
   const article = wrapArticle(
-    'Dead By Daylight Cheats — ESP, Aimbot & Wallhack for DBD',
+    'DBD Cheats - Aimbot, ESP and Wallhack',
     [
-      `Premium Zadeyo external cheat with World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof. Undetected external architecture with instant loader delivery at $35/month on ${link(siteConfig.zadeyoUrl, 'Zadeyo', true)}. Browse the ${link('/cheats', 'full cheat module list')} or see ${link('/buy', 'pricing and requirements')}.`,
+      `DBD cheats for Dead by Daylight with aimbot, ESP, and wallhack. Premium external cheat with World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof from $35/month on ${link(siteConfig.zadeyoUrl, 'Zadeyo', true)}. Browse the ${link('/cheats', 'full cheat module list')} or see ${link('/buy', 'pricing and requirements')}.`,
       `Zadeyo DBD is built for players who want full wallhack coverage, exploit modules, and unlock tools in one private loader. Compatible with Steam, Epic Games, and Game Pass on Windows 10 and 11. Read the ${link('/faq', 'FAQ')} or start with the ${link('/blog/dbd-esp-guide', 'ESP setup guide')}.`,
     ],
     [

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import type { PageSeo } from '../../data/seo'
-import { absoluteUrl, ogImageDimensions, seoImageUrl } from '../../data/seo'
+import { absoluteUrl, homeSeo, logoDimensions, ogImageDimensions, seoImageUrl } from '../../data/seo'
 import { siteConfig } from '../../data/navigation'
 
 type JsonLd = Record<string, unknown> | Record<string, unknown>[]
@@ -59,24 +59,28 @@ export function SeoHead({ seo, jsonLd }: SeoHeadProps) {
     const canonical = absoluteUrl(seo.path)
     const imageUrl = seoImageUrl(seo.image)
 
+    const imageDimensionsForPage = seo.path === '/' ? logoDimensions : ogImageDimensions
+    const siteName = seo.path === '/' ? homeSeo.siteName : siteConfig.fullName
+    const twitterCard = seo.path === '/' ? 'summary' : 'summary_large_image'
+
     document.title = seo.title
 
     upsertMeta('description', seo.description)
-    upsertMeta('author', siteConfig.fullName)
+    upsertMeta('author', seo.path === '/' ? homeSeo.siteName : siteConfig.fullName)
     upsertMeta('robots', seo.noindex ? 'noindex, nofollow' : 'index, follow')
 
     upsertMeta('og:title', seo.title, true)
     upsertMeta('og:description', seo.description, true)
     upsertMeta('og:type', ogTypeForSeo(seo.type), true)
     upsertMeta('og:url', canonical, true)
-    upsertMeta('og:site_name', siteConfig.fullName, true)
+    upsertMeta('og:site_name', siteName, true)
     upsertMeta('og:image', imageUrl, true)
-    upsertMeta('og:image:alt', `${siteConfig.fullName} — ${seo.title}`, true)
-    upsertMeta('og:image:width', String(ogImageDimensions.width), true)
-    upsertMeta('og:image:height', String(ogImageDimensions.height), true)
+    upsertMeta('og:image:alt', seo.path === '/' ? 'DBD Cheats logo' : `${siteConfig.fullName} — ${seo.title}`, true)
+    upsertMeta('og:image:width', String(imageDimensionsForPage.width), true)
+    upsertMeta('og:image:height', String(imageDimensionsForPage.height), true)
     upsertMeta('og:locale', 'en_US', true)
 
-    upsertMeta('twitter:card', 'summary_large_image')
+    upsertMeta('twitter:card', twitterCard)
     upsertMeta('twitter:title', seo.title)
     upsertMeta('twitter:description', seo.description)
     upsertMeta('twitter:image', imageUrl)
