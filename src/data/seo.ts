@@ -18,10 +18,11 @@ export const siteBasePath = import.meta.env.BASE_URL.replace(/\/$/, '')
 
 export const defaultOgImagePath = `${import.meta.env.BASE_URL}og-image.jpg`
 export const siteLogoPath = `${import.meta.env.BASE_URL}zadeyo-logo.webp`
+export const siteOgLogoPath = `${import.meta.env.BASE_URL}og-logo.png`
 
 /** Must match public/og-image.jpg pixel dimensions (see scripts/copy-og-image.mjs). */
 export const ogImageDimensions = { width: 1025, height: 1300 } as const
-export const logoDimensions = { width: 128, height: 128 } as const
+export const logoDimensions = { width: 512, height: 512 } as const
 
 export const homeSeo = {
   title: 'DBD Cheats - Aimbot, ESP and Wallhack',
@@ -85,7 +86,7 @@ export const pageSeo = {
     description: homeSeo.description,
     path: '/',
     type: 'website',
-    image: siteLogoPath,
+    image: siteOgLogoPath,
   },
   buy: {
     title: 'Buy Zadeyo DBD Cheat — Pricing, Features and Requirements | ZADEYO',

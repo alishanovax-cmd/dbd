@@ -5,7 +5,7 @@ import { absoluteAssetUrl, absoluteUrl } from '../../data/seo'
 import { siteConfig } from '../../data/navigation'
 
 const siteRoot = absoluteUrl('/').replace(/\/$/, '')
-const logoUrl = `${siteRoot}/${siteConfig.logoFile}`
+const logoUrl = `${siteRoot}/og-logo.png`
 const ogImageUrl = `${siteRoot}/og-image.jpg`
 
 export function breadcrumbSchema(items: { name: string; path?: string }[]) {

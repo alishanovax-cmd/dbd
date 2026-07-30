@@ -32,10 +32,18 @@ async function optimize() {
 
   const logoWebp = join(root, 'public/zadeyo-logo.webp')
   if (existsSync(logoWebp)) {
-    await sharp(logoWebp).resize(48, 48).png().toFile(join(root, 'public/favicon-48.png'))
-    await sharp(logoWebp).resize(48, 48).png().toFile(join(root, 'public/favicon.ico'))
-    await sharp(logoWebp).resize(180, 180).png().toFile(join(root, 'public/apple-touch-icon.png'))
-    console.log('Generated favicon-48.png and favicon.ico for Google Search')
+    const logo = sharp(logoWebp)
+    await logo.clone().resize(48, 48).png().toFile(join(root, 'public/favicon-48.png'))
+    await logo.clone().resize(48, 48).png().toFile(join(root, 'public/favicon.ico'))
+    await logo.clone().resize(96, 96).png().toFile(join(root, 'public/favicon-96.png'))
+    await logo.clone().resize(192, 192).png().toFile(join(root, 'public/favicon-192.png'))
+    await logo.clone().resize(180, 180).png().toFile(join(root, 'public/apple-touch-icon.png'))
+    await logo
+      .clone()
+      .resize(512, 512, { fit: 'contain', background: { r: 6, g: 4, b: 9, alpha: 1 } })
+      .png()
+      .toFile(join(root, 'public/og-logo.png'))
+    console.log('Generated Zadeyo favicons (48–192px) and og-logo.png for Google Search')
   }
 
   const posterSrc = join(root, 'src/assets/images/hero-huntress-poster.jpg')

@@ -2,7 +2,8 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs'
 
 export const siteConfig = {
   name: 'ZADEYO',
-  logoFile: 'zadeyo-logo.webp',
+  logoFile: 'og-logo.png',
+  logoWebpFile: 'zadeyo-logo.webp',
   fullName: 'Zadeyo DBD Cheats',
   seoSiteName: 'DBD Cheats',
   description:
@@ -26,8 +27,8 @@ export const staticPages = [
     priority: '1.0',
     changefreq: 'weekly',
     siteName: 'DBD Cheats',
-    ogImage: 'zadeyo-logo.webp',
-    ogImageDimensions: { width: 128, height: 128 },
+    ogImage: 'og-logo.png',
+    ogImageDimensions: { width: 512, height: 512 },
   },
   {
     path: '/cheats',
