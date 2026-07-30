@@ -7,14 +7,14 @@ export const siteConfig = {
   fullName: 'Zadeyo DBD Cheats',
   seoSiteName: 'DBD Cheats',
   description:
-    'Zadeyo private external cheat for Dead by Daylight. World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, StreamProof. $35/month.',
+    'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check, HWID spoofer, and StreamProof. From $35/month.',
   discordUrl: 'https://discord.gg/zadeyo',
   supportUrl: 'https://zadeyo.com/support',
   checkoutUrl: 'https://zadeyo.com/go/ALEXA?to=%2Fproducts%2Fdbd',
   zadeyoUrl: 'https://zadeyo.com',
   liveUrl: 'https://dbdcheats.net',
   githubUrl: 'https://github.com/alishanovax-cmd/dbd',
-  lastUpdated: '2026-07-24',
+  lastUpdated: '2026-07-30',
 }
 
 export const staticPages = [
@@ -29,21 +29,23 @@ export const staticPages = [
     siteName: 'DBD Cheats',
     ogImage: 'og-logo.png',
     ogImageDimensions: { width: 512, height: 512 },
+    includeProduct: true,
+    includeFaq: true,
   },
   {
     path: '/cheats',
-    title: 'Zadeyo DBD Cheats — ESP, Wallhack and Exploit Modules | ZADEYO',
+    title: 'DBD Cheats — ESP, Wallhack & Aimbot Modules',
     description:
-      'Full Zadeyo DBD cheat module list: Player ESP, World ESP, Auto Skill Check, SpeedHack, HWID Spoofer, Cosmetic Unlocker, StreamProof, and Cloud-DMA. External cheat architecture.',
+      'DBD cheats module list — Player ESP, World ESP wallhack, aimbot, Auto Skill Check, SpeedHack, HWID Spoofer, StreamProof, and external cheat architecture.',
     type: 'website',
     priority: '0.9',
     changefreq: 'weekly',
     breadcrumbs: [
       { name: 'Home', path: '/' },
-      { name: 'Zadeyo DBD Cheats', path: '/cheats' },
+      { name: 'DBD Cheats', path: '/cheats' },
     ],
     itemList: {
-      name: 'Zadeyo DBD Cheat Modules',
+      name: 'DBD Cheat Modules',
       items: [
         'Player ESP',
         'World ESP',
@@ -58,56 +60,56 @@ export const staticPages = [
   },
   {
     path: '/buy',
-    title: 'Buy Zadeyo DBD Cheat — Pricing, Features and Requirements | ZADEYO',
+    title: 'Buy DBD Cheats — Pricing & Features',
     description:
-      'Purchase Zadeyo DBD cheat at $35/month or $150 lifetime. Full feature list, system requirements, delivery terms, FAQ, and checkout via the official Zadeyo store.',
+      'Buy DBD cheats for Dead by Daylight — $35/month or $150 lifetime. Full aimbot, ESP, wallhack, HWID spoofer, requirements, and instant Zadeyo checkout.',
     type: 'product',
     priority: '0.9',
     changefreq: 'weekly',
     breadcrumbs: [
       { name: 'Home', path: '/' },
-      { name: 'Buy Zadeyo DBD Cheat', path: '/buy' },
+      { name: 'Buy DBD Cheats', path: '/buy' },
     ],
     includeProduct: true,
   },
   {
     path: '/faq',
-    title: 'Zadeyo DBD Cheat FAQ — Safety, ESP and Compatibility | ZADEYO',
+    title: 'DBD Cheats FAQ — Safety, ESP & Compatibility',
     description:
-      'Zadeyo DBD cheat FAQ: undetected status, World ESP, HWID Spoofer, StreamProof, platform support, and safety policy. Honest answers with no ban guarantees.',
+      'DBD cheats FAQ — undetected status, ESP, wallhack, aimbot, HWID Spoofer, StreamProof, Steam/Epic support, and safety policy.',
     type: 'website',
     priority: '0.85',
     changefreq: 'weekly',
     breadcrumbs: [
       { name: 'Home', path: '/' },
-      { name: 'Zadeyo DBD Cheat FAQ', path: '/faq' },
+      { name: 'DBD Cheats FAQ', path: '/faq' },
     ],
     includeFaq: true,
   },
   {
     path: '/reviews',
-    title: 'Zadeyo DBD Customer Feedback — Official Channels | ZADEYO',
+    title: 'DBD Cheats Reviews — Official Feedback',
     description:
-      'Honest feedback hub for Zadeyo DBD cheat. No fabricated reviews on this site — links to the official Zadeyo store, Discord, and support portal for real buyer information.',
+      'DBD cheats reviews and buyer feedback — official Zadeyo store, Discord, and support links. No fake ratings on this site.',
     type: 'website',
     priority: '0.85',
     changefreq: 'weekly',
     breadcrumbs: [
       { name: 'Home', path: '/' },
-      { name: 'Customer Feedback', path: '/reviews' },
+      { name: 'DBD Cheats Reviews', path: '/reviews' },
     ],
   },
   {
     path: '/blog',
-    title: 'Zadeyo DBD Cheat Guides — ESP, Spoofer and Setup | ZADEYO',
+    title: 'DBD Cheat Guides — ESP, Aimbot & Setup',
     description:
-      'Setup guides for Zadeyo DBD cheat: ESP configuration, World ESP, HWID spoofer, loader updates, StreamProof, and external cheat architecture.',
+      'DBD cheats setup guides — ESP, wallhack, aimbot, HWID spoofer, loader updates, StreamProof, and external cheat configuration.',
     type: 'website',
     priority: '0.8',
     changefreq: 'weekly',
     breadcrumbs: [
       { name: 'Home', path: '/' },
-      { name: 'Zadeyo DBD Cheat Guides', path: '/blog' },
+      { name: 'DBD Cheat Guides', path: '/blog' },
     ],
     includeBlogList: true,
   },
@@ -228,7 +230,8 @@ function organizationSchema(siteUrl) {
     name: siteConfig.name,
     url: absoluteUrl(siteUrl, '/'),
     logo: `${siteUrl}/${siteConfig.logoFile}`,
-    description: siteConfig.description,
+    description:
+      'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check, HWID spoofer, and StreamProof.',
     sameAs: [siteConfig.discordUrl, siteConfig.zadeyoUrl, siteConfig.githubUrl],
   }
 }
@@ -285,10 +288,11 @@ function productSchema(siteUrl) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: siteConfig.fullName,
-    description: siteConfig.description,
-    sku: 'zadeyo-dbd-cheat',
-    image: `${siteUrl}/og-image.jpg`,
+    name: 'DBD Cheats — External Dead by Daylight Cheat',
+    description:
+      'DBD cheats for Dead by Daylight with aimbot, ESP, wallhack, World ESP, Auto Skill Check, HWID spoofer, and StreamProof.',
+    sku: 'dbd-cheats-external',
+    image: `${siteUrl}/og-logo.png`,
     brand: { '@type': 'Brand', name: siteConfig.name },
     url: absoluteUrl(siteUrl, '/buy'),
     offers: [
@@ -374,7 +378,7 @@ function articleSchema(siteUrl, article) {
     },
     image: resolveBuiltAssetUrl(siteUrl, prefix),
     articleSection: article.category,
-    keywords: `Zadeyo DBD cheat, ${article.category}, Dead by Daylight`,
+    keywords: `DBD cheats, ${article.category}, Dead by Daylight, aimbot, ESP`,
   }
 }
 

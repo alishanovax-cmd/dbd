@@ -1,6 +1,6 @@
 import { PageLayout } from '../components/layout/PageLayout'
 import { SeoHead } from '../components/seo/SeoHead'
-import { globalSchemas, webPageSchema } from '../components/seo/schema'
+import { faqSchema, globalSchemas, productSchema, webPageSchema } from '../components/seo/schema'
 import {
   CheatOverviewSection,
   ClusterLinksSection,
@@ -30,6 +30,8 @@ export function HomePage() {
           webPageSchema(pageSeo.home.title, pageSeo.home.description, pageSeo.home.path, {
             dateModified: siteConfig.lastUpdated,
           }),
+          productSchema(),
+          faqSchema(),
         ]}
       />
       <HeroSection />

@@ -89,44 +89,44 @@ export const pageSeo = {
     image: siteOgLogoPath,
   },
   buy: {
-    title: 'Buy Zadeyo DBD Cheat — Pricing, Features and Requirements | ZADEYO',
+    title: 'Buy DBD Cheats — Pricing & Features',
     description:
-      'Purchase Zadeyo DBD cheat at $35/month or $150 lifetime. Full feature list, system requirements, delivery terms, FAQ, and checkout via the official Zadeyo store.',
+      'Buy DBD cheats for Dead by Daylight — $35/month or $150 lifetime. Full aimbot, ESP, wallhack, HWID spoofer, requirements, and instant Zadeyo checkout.',
     path: '/buy',
     type: 'product',
     image: defaultOgImagePath,
   },
   cheats: {
-    title: 'Zadeyo DBD Cheats — ESP, Wallhack and Exploit Modules | ZADEYO',
+    title: 'DBD Cheats — ESP, Wallhack & Aimbot Modules',
     description:
-      'Full Zadeyo DBD cheat module list: Player ESP, World ESP, Auto Skill Check, SpeedHack, HWID Spoofer, Cosmetic Unlocker, StreamProof, and Cloud-DMA. External cheat architecture.',
+      'DBD cheats module list — Player ESP, World ESP wallhack, aimbot, Auto Skill Check, SpeedHack, HWID Spoofer, StreamProof, and external cheat architecture.',
     path: '/cheats',
     type: 'website',
   },
   reviews: {
-    title: 'Zadeyo DBD Customer Feedback — Official Channels | ZADEYO',
+    title: 'DBD Cheats Reviews — Official Feedback',
     description:
-      'Honest feedback hub for Zadeyo DBD cheat. No fabricated reviews on this site — links to the official Zadeyo store, Discord, and support portal for real buyer information.',
+      'DBD cheats reviews and buyer feedback — official Zadeyo store, Discord, and support links. No fake ratings on this site.',
     path: '/reviews',
     type: 'website',
   },
   faq: {
-    title: 'Zadeyo DBD Cheat FAQ — Safety, ESP and Compatibility | ZADEYO',
+    title: 'DBD Cheats FAQ — Safety, ESP & Compatibility',
     description:
-      'Zadeyo DBD cheat FAQ: undetected status, World ESP, HWID Spoofer, StreamProof, platform support, and safety policy. Honest answers with no ban guarantees.',
+      'DBD cheats FAQ — undetected status, ESP, wallhack, aimbot, HWID Spoofer, StreamProof, Steam/Epic support, and safety policy.',
     path: '/faq',
     type: 'website',
   },
   blog: {
-    title: 'Zadeyo DBD Cheat Guides — ESP, Spoofer and Setup | ZADEYO',
+    title: 'DBD Cheat Guides — ESP, Aimbot & Setup',
     description:
-      'Setup guides for Zadeyo DBD cheat: ESP configuration, World ESP, HWID spoofer, loader updates, StreamProof, and external cheat architecture.',
+      'DBD cheats setup guides — ESP, wallhack, aimbot, HWID spoofer, loader updates, StreamProof, and external cheat configuration.',
     path: '/blog',
     type: 'website',
   },
   notFound: {
-    title: 'Page Not Found | ZADEYO',
-    description: 'The requested page could not be found. Browse Zadeyo DBD cheat guides or return to the homepage.',
+    title: 'Page Not Found | DBD Cheats',
+    description: 'Page not found. Browse DBD cheat guides or return to the DBD cheats homepage.',
     path: '/404',
     noindex: true,
   },
@@ -137,7 +137,7 @@ export function blogArticleSeo(slug: string): PageSeo | undefined {
   if (!article) return undefined
 
   return {
-    title: `${article.title} | ZADEYO`,
+    title: `${article.title} | DBD Cheats`,
     description: article.excerpt,
     path: `/blog/${slug}`,
     type: 'article',

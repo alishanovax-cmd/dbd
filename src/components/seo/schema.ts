@@ -6,7 +6,6 @@ import { siteConfig } from '../../data/navigation'
 
 const siteRoot = absoluteUrl('/').replace(/\/$/, '')
 const logoUrl = `${siteRoot}/og-logo.png`
-const ogImageUrl = `${siteRoot}/og-image.jpg`
 
 export function breadcrumbSchema(items: { name: string; path?: string }[]) {
   return {
@@ -39,7 +38,7 @@ export function webPageSchema(
     ...(dateModified ? { dateModified } : {}),
     isPartOf: {
       '@type': 'WebSite',
-      name: siteConfig.fullName,
+      name: 'DBD Cheats',
       url: absoluteUrl('/'),
     },
   }
@@ -52,10 +51,11 @@ export function productSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: siteConfig.fullName,
-    description: siteConfig.description,
-    sku: 'zadeyo-dbd-cheat',
-    image: ogImageUrl,
+    name: 'DBD Cheats — External Dead by Daylight Cheat',
+    description:
+      'DBD cheats for Dead by Daylight with aimbot, ESP, wallhack, World ESP, Auto Skill Check, HWID spoofer, and StreamProof.',
+    sku: 'dbd-cheats-external',
+    image: logoUrl,
     brand: {
       '@type': 'Brand',
       name: siteConfig.name,
@@ -123,7 +123,7 @@ export function articleSchema(article: BlogArticle) {
     },
     image: absoluteAssetUrl(article.image),
     articleSection: article.category,
-    keywords: `Zadeyo DBD cheat, ${article.category}, Dead by Daylight`,
+    keywords: `DBD cheats, ${article.category}, Dead by Daylight, aimbot, ESP`,
   }
 }
 
@@ -181,7 +181,8 @@ export function organizationSchema() {
     name: siteConfig.name,
     url: absoluteUrl('/'),
     logo: logoUrl,
-    description: siteConfig.description,
+    description:
+      'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check, HWID spoofer, and StreamProof.',
     sameAs: [siteConfig.discordUrl, siteConfig.zadeyoUrl, siteConfig.githubUrl],
   }
 }

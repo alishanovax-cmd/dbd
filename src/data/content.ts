@@ -1,10 +1,10 @@
 export const heroContent = {
-  eyebrow: 'Private DBD Cheat · Zadeyo',
-  titleLine1: 'Dead By Daylight Cheats',
-  titleLine2: 'ESP, Aimbot & Wallhack',
+  eyebrow: 'DBD Cheats · External · Undetected',
+  titleLine1: 'DBD Cheats',
+  titleLine2: 'Aimbot, ESP and Wallhack',
   featureChips: ['World ESP', 'Auto Skill Check', 'HWID Spoofer', 'StreamProof'],
   description:
-    'Premium external cheat — World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof. Undetected. Instant delivery.',
+    'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check, HWID spoofer, and StreamProof. Undetected. Instant delivery from $35/month.',
   compatibility: 'External · Undetected · Steam · Epic · Game Pass · $35/month',
   badges: ['Undetected', 'External', 'StreamProof'],
 } as const
