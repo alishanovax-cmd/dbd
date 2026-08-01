@@ -25,9 +25,9 @@ export const ogImageDimensions = { width: 1025, height: 1300 } as const
 export const logoDimensions = { width: 512, height: 512 } as const
 
 export const homeSeo = {
-  title: 'DBD Cheats - Aimbot, ESP and Wallhack',
+  title: 'DBD Cheats 2026 | Aimbot, ESP & Wallhack',
   description:
-    'DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check & HWID spoofer. External cheat from $35/month with setup guides.',
+    'Official DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Auto Skill Check & HWID spoofer. From $35/month. Setup guides & modules.',
   siteName: 'DBD Cheats',
 } as const
 
@@ -91,7 +91,7 @@ export const pageSeo = {
   buy: {
     title: 'Buy DBD Cheats — Pricing & Features',
     description:
-      'Buy DBD cheats for Dead by Daylight — $35/month or $150 lifetime. Full aimbot, ESP, wallhack, HWID spoofer, requirements, and instant Zadeyo checkout.',
+      'Buy DBD cheats for Dead by Daylight — $35/month or $150 lifetime. Full aimbot, ESP, wallhack, HWID spoofer, requirements, and instant checkout.',
     path: '/buy',
     type: 'product',
     image: defaultOgImagePath,
@@ -106,7 +106,7 @@ export const pageSeo = {
   reviews: {
     title: 'DBD Cheats Reviews — Official Feedback',
     description:
-      'DBD cheats reviews and buyer feedback — official Zadeyo store, Discord, and support links. No fake ratings on this site.',
+      'DBD cheats reviews and buyer feedback — official official store, Discord, and support links. No fake ratings on this site.',
     path: '/reviews',
     type: 'website',
   },

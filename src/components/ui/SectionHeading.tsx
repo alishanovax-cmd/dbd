@@ -13,6 +13,7 @@ interface SectionHeadingProps {
   as?: 'h1' | 'h2' | 'h3'
   gradient?: boolean
   className?: string
+  id?: string
 }
 
 export function SectionHeading({
@@ -20,9 +21,10 @@ export function SectionHeading({
   as: Tag = 'h2',
   gradient = false,
   className = '',
+  id,
 }: SectionHeadingProps) {
   return (
-    <Tag className={`section-heading ${gradient ? 'gradient-text' : ''} ${className}`.trim()}>
+    <Tag id={id} className={`section-heading ${gradient ? 'gradient-text' : ''} ${className}`.trim()}>
       {children}
     </Tag>
   )

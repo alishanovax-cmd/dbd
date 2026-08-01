@@ -45,7 +45,7 @@ export function CheatsHeroSection() {
             <figure className="page-hero__gallery-item">
               <img
                 src={assets.cheatMenu}
-                alt="Zadeyo DBD cheat menu — ESP and exploit modules"
+                alt="DBD cheat menu — ESP and exploit modules"
                 loading="eager"
                 width={imageDimensions.cheatMenu.width}
                 height={imageDimensions.cheatMenu.height}
@@ -55,7 +55,7 @@ export function CheatsHeroSection() {
             <figure className="page-hero__gallery-item">
               <img
                 src={assets.atmosphere1}
-                alt="Zadeyo DBD ESP wallhack in match"
+                alt="DBD ESP wallhack in match"
                 loading="lazy"
                 width={imageDimensions.atmosphere1.width}
                 height={imageDimensions.atmosphere1.height}
@@ -142,7 +142,7 @@ export function CheatsHighlightsSection() {
         <ScrollReveal className="cheats-highlights__media">
           <InlineVideo
             poster={assets.atmosphere1}
-            label="Zadeyo DBD cheat modules — live ESP and wallhack preview"
+            label="DBD cheat modules — live ESP and wallhack preview"
           />
         </ScrollReveal>
         <ScrollReveal className="cheats-highlights__copy" delay={100}>

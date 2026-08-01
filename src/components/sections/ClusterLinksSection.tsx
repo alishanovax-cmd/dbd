@@ -10,7 +10,7 @@ export function ClusterLinksSection() {
       <div className="container cluster-section__inner">
         <ScrollReveal>
           <SectionHeading className="cluster-section__title">
-            Zadeyo DBD Cheat Resources
+            DBD Cheats — Guides and Modules
           </SectionHeading>
         </ScrollReveal>
         <ScrollReveal delay={80}>

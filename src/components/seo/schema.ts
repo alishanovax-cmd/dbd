@@ -58,7 +58,7 @@ export function productSchema() {
     image: logoUrl,
     brand: {
       '@type': 'Brand',
-      name: siteConfig.name,
+      name: 'DBD Cheats',
     },
     url: absoluteUrl('/buy'),
     offers: [monthly, lifetime]
@@ -131,7 +131,7 @@ export function blogItemListSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Zadeyo DBD Cheat Guides',
+    name: 'DBD Cheat Guides',
     description: pageSeoBlogDescription(),
     numberOfItems: blogArticles.length,
     itemListElement: blogArticles.map((article, index) => ({
@@ -158,8 +158,8 @@ export function cheatsItemListSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Zadeyo DBD Cheat Modules',
-    description: 'Core Zadeyo DBD cheat modules included in every subscription.',
+    name: 'DBD Cheat Modules',
+    description: 'Core DBD cheats modules — ESP, wallhack, aimbot, spoofer, and StreamProof.',
     numberOfItems: modules.length,
     itemListElement: modules.map((name, index) => ({
       '@type': 'ListItem',
@@ -171,16 +171,48 @@ export function cheatsItemListSchema() {
 }
 
 function pageSeoBlogDescription() {
-  return 'Setup guides for Zadeyo DBD cheat: ESP, spoofer, loader updates, and StreamProof.'
+  return 'Setup guides for DBD cheat: ESP, spoofer, loader updates, and StreamProof.'
+}
+
+export function softwareApplicationSchema() {
+  const monthly = pricingPlans.find((p) => p.id === 'monthly')
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'DBD Cheats',
+    alternateName: siteConfig.fullName,
+    applicationCategory: 'GameApplication',
+    operatingSystem: 'Windows 10, Windows 11',
+    description:
+      'External DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, HWID spoofer, and StreamProof with instant loader delivery.',
+    url: absoluteUrl('/'),
+    image: logoUrl,
+    offers: {
+      '@type': 'Offer',
+      price: monthly ? String(monthly.price) : '35',
+      priceCurrency: 'USD',
+      url: siteConfig.checkoutUrl,
+    },
+  }
 }
 
 export function organizationSchema() {
+  const orgId = `${siteRoot}#organization`
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: siteConfig.name,
+    '@id': orgId,
+    name: 'DBD Cheats',
+    alternateName: [siteConfig.fullName, siteConfig.name],
     url: absoluteUrl('/'),
-    logo: logoUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: logoUrl,
+      width: 512,
+      height: 512,
+      contentUrl: logoUrl,
+    },
     description:
       'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check, HWID spoofer, and StreamProof.',
     sameAs: [siteConfig.discordUrl, siteConfig.zadeyoUrl, siteConfig.githubUrl],
@@ -191,20 +223,14 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${siteRoot}#website`,
     name: 'DBD Cheats',
-    alternateName: siteConfig.fullName,
+    alternateName: [siteConfig.fullName, siteConfig.name],
     url: absoluteUrl('/'),
     description:
       'DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check and HWID spoofer.',
     inLanguage: 'en-US',
-    publisher: {
-      '@type': 'Organization',
-      name: siteConfig.name,
-      logo: {
-        '@type': 'ImageObject',
-        url: logoUrl,
-      },
-    },
+    publisher: { '@id': `${siteRoot}#organization` },
   }
 }
 

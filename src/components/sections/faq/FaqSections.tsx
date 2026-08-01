@@ -76,7 +76,7 @@ export function FaqCtaSection() {
               Join Discord
             </Button>
             <Button href={siteConfig.supportUrl} external variant="ghost">
-              Zadeyo support portal
+              Support portal
             </Button>
             <Button href={siteConfig.checkoutUrl} external variant="ghost">
               Buy page

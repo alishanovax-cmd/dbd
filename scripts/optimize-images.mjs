@@ -1,7 +1,8 @@
-import { existsSync, mkdirSync } from 'node:fs'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
+import toIco from 'to-ico'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -33,17 +34,25 @@ async function optimize() {
   const logoWebp = join(root, 'public/zadeyo-logo.webp')
   if (existsSync(logoWebp)) {
     const logo = sharp(logoWebp)
-    await logo.clone().resize(48, 48).png().toFile(join(root, 'public/favicon-48.png'))
-    await logo.clone().resize(48, 48).png().toFile(join(root, 'public/favicon.ico'))
-    await logo.clone().resize(96, 96).png().toFile(join(root, 'public/favicon-96.png'))
-    await logo.clone().resize(192, 192).png().toFile(join(root, 'public/favicon-192.png'))
-    await logo.clone().resize(180, 180).png().toFile(join(root, 'public/apple-touch-icon.png'))
+    const faviconBg = { r: 6, g: 4, b: 9, alpha: 1 }
+    const faviconOpts = { fit: 'contain', background: faviconBg }
+
+    await logo.clone().resize(48, 48, faviconOpts).png().toFile(join(root, 'public/favicon-48.png'))
+    const icoSizes = await Promise.all(
+      [16, 32, 48].map((size) =>
+        logo.clone().resize(size, size, faviconOpts).png().toBuffer(),
+      ),
+    )
+    writeFileSync(join(root, 'public/favicon.ico'), await toIco(icoSizes))
+    await logo.clone().resize(96, 96, faviconOpts).png().toFile(join(root, 'public/favicon-96.png'))
+    await logo.clone().resize(192, 192, faviconOpts).png().toFile(join(root, 'public/favicon-192.png'))
+    await logo.clone().resize(180, 180, faviconOpts).png().toFile(join(root, 'public/apple-touch-icon.png'))
     await logo
       .clone()
-      .resize(512, 512, { fit: 'contain', background: { r: 6, g: 4, b: 9, alpha: 1 } })
+      .resize(512, 512, faviconOpts)
       .png()
       .toFile(join(root, 'public/og-logo.png'))
-    console.log('Generated Zadeyo favicons (48–192px) and og-logo.png for Google Search')
+    console.log('Generated brand favicons (48–192px) and og-logo.png for Google Search')
   }
 
   const posterSrc = join(root, 'src/assets/images/hero-huntress-poster.jpg')

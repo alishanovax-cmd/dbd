@@ -16,7 +16,7 @@ const html = readFileSync('dist/index.html', 'utf8')
 const noindexBlock = `
     <meta name="robots" content="noindex, nofollow" />
     <meta name="description" content="The requested page could not be found." />
-    <title>Page Not Found | ZADEYO</title>`
+    <title>Page Not Found | DBD Cheats</title>`
 
 const output = stripSeoTags(html).replace(/<title>[\s\S]*?<\/title>/, noindexBlock.trim())
 

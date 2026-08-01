@@ -54,11 +54,12 @@ export function HeroSection() {
                 <span className="hero-visual__corner hero-visual__corner--br" aria-hidden="true" />
                 <img
                   src={assets.cheatMenu}
-                  alt="Zadeyo DBD cheat menu — ESP, wallhack, and exploit overlay"
+                  alt="DBD cheats menu — ESP, wallhack, and aimbot overlay"
                   className="hero-visual__image"
                   loading="eager"
                   decoding="sync"
                   fetchPriority="high"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                   width={imageDimensions.cheatMenu.width}
                   height={imageDimensions.cheatMenu.height}
                 />
@@ -90,7 +91,7 @@ export function HeroSection() {
             </Button>
           </div>
           <p className="hero-section__compat">{heroContent.compatibility}</p>
-          <ShareButtons label="Share Zadeyo DBD Cheats" compact className="hero-section__share" />
+          <ShareButtons label="Share DBD Cheats" compact className="hero-section__share" />
         </div>
       </div>
 
@@ -118,7 +119,7 @@ export function WhyChooseSection() {
         <ScrollReveal className="why-choose-section__media" delay={100}>
           <img
             src={assets.whyChooseImage}
-            alt="Dead by Daylight gameplay — why choose Zadeyo DBD cheats"
+            alt="Dead by Daylight gameplay — why choose DBD cheats"
             loading="lazy"
             decoding="async"
             width={imageDimensions.whyChooseImage.width}

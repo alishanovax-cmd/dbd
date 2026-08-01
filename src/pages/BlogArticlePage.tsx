@@ -9,7 +9,7 @@ import { ScrollReveal } from '../components/ui/ScrollReveal'
 import { SectionHeading } from '../components/ui/SectionHeading'
 import { ShareButtons } from '../components/ui/ShareButtons'
 import { getBlogArticle, blogPosts } from '../data/blogArticles'
-import { siteConfig } from '../data/navigation'
+import { homeNavLink, siteConfig } from '../data/navigation'
 import { blogArticleSeo, pageSeo } from '../data/seo'
 
 export function BlogArticlePage() {
@@ -48,8 +48,8 @@ export function BlogArticlePage() {
         jsonLd={[
           ...globalSchemas(),
           breadcrumbSchema([
-            { name: 'Home', path: '/' },
-            { name: 'Zadeyo DBD Cheat Guides', path: '/blog' },
+            { name: homeNavLink.label, path: homeNavLink.href },
+            { name: 'DBD Cheat Guides', path: '/blog' },
             { name: post.title, path: `/blog/${post.slug}` },
           ]),
           articleSchema(post),
@@ -58,8 +58,8 @@ export function BlogArticlePage() {
       />
       <Breadcrumbs
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Blog', href: '/blog' },
+          { label: homeNavLink.label, href: homeNavLink.href },
+          { label: 'DBD Cheat Guides', href: '/blog' },
           { label: post.title },
         ]}
       />
@@ -79,7 +79,7 @@ export function BlogArticlePage() {
             <div className="blog-article__hero-media">
               <img
                 src={post.image}
-                alt={`${post.title} — Zadeyo DBD cheat guide illustration`}
+                alt={`${post.title} — DBD cheat guide illustration`}
                 className="rounded-image"
                 loading="eager"
                 width={coverDimensions.width}
@@ -106,9 +106,9 @@ export function BlogArticlePage() {
 
           <ScrollReveal delay={160}>
             <div className="blog-article__cta glass-card">
-              <h2 className="blog-article__cta-title">Get Zadeyo DBD Cheat — Instant Delivery</h2>
+              <h2 className="blog-article__cta-title">Get DBD Cheat — Instant Delivery</h2>
               <p className="body-text">
-                Full ESP, exploits, Cosmetic Unlocker, HWID Spoofer, and StreamProof. $35/month on Zadeyo.
+                Full ESP, exploits, Cosmetic Unlocker, HWID Spoofer, and StreamProof. $35/month through checkout.
               </p>
               <div className="blog-article__cta-actions">
                 <Button href={siteConfig.checkoutUrl} external>

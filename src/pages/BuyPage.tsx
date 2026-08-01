@@ -8,6 +8,7 @@ import {
   BuyHeroSection,
   BuyRequirementsSection,
 } from '../components/sections/buy'
+import { homeNavLink } from '../data/navigation'
 import { pageSeo } from '../data/seo'
 
 export function BuyPage() {
@@ -16,14 +17,14 @@ export function BuyPage() {
       <SeoHead
         seo={pageSeo.buy}
         jsonLd={[...globalSchemas(), breadcrumbSchema([
-          { name: 'Home', path: '/' },
-          { name: 'Buy Zadeyo DBD Cheat', path: '/buy' },
+          { name: homeNavLink.label, path: homeNavLink.href },
+          { name: 'Buy DBD Cheats', path: '/buy' },
         ]), webPageSchema(pageSeo.buy.title, pageSeo.buy.description, pageSeo.buy.path), productSchema()]}
       />
       <Breadcrumbs
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Buy Zadeyo DBD Cheat' },
+          { label: homeNavLink.label, href: homeNavLink.href },
+          { label: 'Buy DBD Cheats' },
         ]}
       />
       <BuyHeroSection />

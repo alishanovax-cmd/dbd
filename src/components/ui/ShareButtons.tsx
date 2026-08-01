@@ -99,7 +99,7 @@ export function ShareButtons({
   const [copied, setCopied] = useState(false)
 
   const shareUrl = url ?? absoluteUrl(location.pathname)
-  const shareTitle = title ?? (typeof document !== 'undefined' ? document.title : 'Zadeyo DBD Cheats')
+  const shareTitle = title ?? (typeof document !== 'undefined' ? document.title : 'DBD Cheats')
 
   const links = useMemo(
     () =>

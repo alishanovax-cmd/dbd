@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { navLinks, siteConfig } from '../../data/navigation'
+import { homeNavLink, navLinks, siteConfig } from '../../data/navigation'
 import { BrandLogo } from '../ui/BrandLogo'
 import { Button } from '../ui/Button'
 import { DiscordIcon } from '../ui/DiscordIcon'
@@ -10,7 +10,7 @@ export function Header() {
 
   return (
     <header
-      className="site-header fixed inset-x-0 top-0 z-50 border-b"
+      className="site-header z-50 border-b"
       style={{
         borderColor: 'var(--border-ghost)',
         background: '#060409ee',
@@ -21,12 +21,12 @@ export function Header() {
           to="/"
           className="site-logo"
           onClick={() => setMenuOpen(false)}
-          aria-label="Zadeyo home"
+          aria-label={`${homeNavLink.label} home`}
         >
           <BrandLogo />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
+        <nav className="site-header__nav hidden items-center gap-8 md:flex" aria-label="Main navigation">
           {navLinks.map((link) => (
             <NavLink
               key={link.href}

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/copy-og-image.mjs && vite",
-    "build": "node scripts/copy-og-image.mjs && node scripts/optimize-images.mjs && tsc -b && vite build && node scripts/copy-seo-assets.mjs && node scripts/strip-deploy-assets.mjs && node scripts/generate-sitemap.mjs && node scripts/prerender-routes.mjs && node scripts/copy-404.mjs",
+    "build": "node scripts/copy-og-image.mjs && node scripts/optimize-images.mjs && tsc -b && vite build && node scripts/copy-seo-assets.mjs && node scripts/strip-deploy-assets.mjs && node scripts/generate-sitemap.mjs && node scripts/indexnow-ping.mjs && node scripts/prerender-routes.mjs && node scripts/copy-404.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
     "lint": "oxlint",
     "preview": "vite preview",
@@ -27,6 +27,7 @@
     "oxlint": "^1.71.0",
     "sharp": "^0.35.3",
     "tailwindcss": "^4.3.3",
+    "to-ico": "^1.1.5",
     "typescript": "~6.0.2",
     "vite": "^8.1.1"
   }

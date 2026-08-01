@@ -29,10 +29,10 @@ const keywordLinks = [
 ]
 
 const externalLinks = [
-  { href: siteConfig.zadeyoUrl, label: 'Zadeyo Official Store' },
-  { href: siteConfig.checkoutUrl, label: 'Zadeyo DBD Product Page' },
-  { href: siteConfig.supportUrl, label: 'Zadeyo Support Portal' },
-  { href: siteConfig.discordUrl, label: 'Zadeyo Discord Community' },
+  { href: siteConfig.zadeyoUrl, label: 'Official Store' },
+  { href: siteConfig.checkoutUrl, label: 'DBD Product Page' },
+  { href: siteConfig.supportUrl, label: 'Support Portal' },
+  { href: siteConfig.discordUrl, label: 'Discord Community' },
   { href: 'https://deadbydaylight.com', label: 'Dead by Daylight Official Site' },
   { href: 'https://store.steampowered.com/app/381210/Dead_by_Daylight/', label: 'DBD on Steam' },
   { href: 'https://www.behaviour.com/en', label: 'Behaviour Interactive' },
@@ -103,8 +103,8 @@ function staticExploreHtml(currentPath) {
     .map((item) => `<li>${link(item.href, item.label, true)}</li>`)
     .join('\n            ')
 
-  return `<nav class="static-page-links" aria-label="Explore Zadeyo DBD Cheats">
-        <h2>Explore Zadeyo DBD Cheats</h2>
+  return `<nav class="static-page-links" aria-label="Explore DBD Cheats">
+        <h2>Explore DBD Cheats</h2>
         <div class="static-page-links__groups">
           <section>
             <h3>Site pages</h3>
@@ -174,37 +174,37 @@ function homeStaticHtml(route) {
   const article = wrapArticle(
     'DBD Cheats - Aimbot, ESP and Wallhack',
     [
-      `DBD cheats for Dead by Daylight with aimbot, ESP, and wallhack. Premium external cheat with World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof from $35/month on ${link(siteConfig.zadeyoUrl, 'Zadeyo', true)}. Browse the ${link('/cheats', 'full cheat module list')} or see ${link('/buy', 'pricing and requirements')}.`,
-      `Zadeyo DBD is built for players who want full wallhack coverage, exploit modules, and unlock tools in one private loader. Compatible with Steam, Epic Games, and Game Pass on Windows 10 and 11. Read the ${link('/faq', 'FAQ')} or start with the ${link('/blog/dbd-esp-guide', 'ESP setup guide')}.`,
+      `DBD cheats for Dead by Daylight with aimbot, ESP, and wallhack. Premium external cheat with World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof from $35/month on ${link(siteConfig.zadeyoUrl, 'the official store', true)}. Browse the ${link('/cheats', 'full cheat module list')} or see ${link('/buy', 'pricing and requirements')}.`,
+      `DBD is built for players who want full wallhack coverage, exploit modules, and unlock tools in one private loader. Compatible with Steam, Epic Games, and Game Pass on Windows 10 and 11. Read the ${link('/faq', 'FAQ')} or start with the ${link('/blog/dbd-esp-guide', 'ESP setup guide')}.`,
     ],
     [
       {
-        heading: 'Why Choose Zadeyo DBD Cheats?',
+        heading: 'Why Choose DBD Cheats?',
         paragraphs: [
-          `Zadeyo DBD is a private external cheat built for reliability, safety, and full feature coverage at $35/month or $150 lifetime. External mode keeps the overlay outside the game process — significantly lower detection risk than internal cheats. Compare options on the ${link('/reviews', 'customer feedback hub')}.`,
-          `Every subscription includes loader updates, HWID Spoofer, Cosmetic Unlocker, Cloud-DMA option, and 24/7 Discord support. Zadeyo pushes updates fast after every DBD patch so your build never falls behind. See ${link('/blog/staying-updated-after-patches', 'loader update guide')}.`,
-          `Buy once on Zadeyo, download instantly, and configure ESP colors, exploit toggles, and StreamProof from a clean in-game menu. No feature tiers — the full cheat suite is included. ${link('/buy', 'Purchase Zadeyo DBD Cheat')}.`,
+          `DBD is a private external cheat built for reliability, safety, and full feature coverage at $35/month or $150 lifetime. External mode keeps the overlay outside the game process — significantly lower detection risk than internal cheats. Compare options on the ${link('/reviews', 'customer feedback hub')}.`,
+          `Every subscription includes loader updates, HWID Spoofer, Cosmetic Unlocker, Cloud-DMA option, and 24/7 Discord support. Updates ship fast after every DBD patch so your build never falls behind. See ${link('/blog/staying-updated-after-patches', 'loader update guide')}.`,
+          `Buy once through checkout, download instantly, and configure ESP colors, exploit toggles, and StreamProof from a clean in-game menu. No feature tiers — the full cheat suite is included. ${link('/buy', 'Purchase DBD Cheat')}.`,
         ],
       },
       {
-        heading: 'Zadeyo DBD Cheat — Full Feature Breakdown',
+        heading: 'DBD Cheat — Full Feature Breakdown',
         paragraphs: [
-          `Meet the ZADEYO private cheat for Dead by Daylight — external ESP, exploit modules, and unlock tools in one loader. Flexible ESP/WH customization lets you see survivors, killers, generators, exits, hatches, totems, traps, hooks, and more through walls. Configure ${link('/blog/world-esp-guide', 'World ESP')} and ${link('/blog/dbd-esp-guide', 'Player ESP')}.`,
+          `Meet the  private cheat for Dead by Daylight — external ESP, exploit modules, and unlock tools in one loader. Flexible ESP/WH customization lets you see survivors, killers, generators, exits, hatches, totems, traps, hooks, and more through walls. Configure ${link('/blog/world-esp-guide', 'World ESP')} and ${link('/blog/dbd-esp-guide', 'Player ESP')}.`,
           `Included out of the box: Cosmetic Unlocker for all skins, HWID Spoofer for hardware ban protection, StreamProof for hidden overlays on OBS, Auto Skill Check, Instant Animation, SpeedHack, High Jump, FOV Changer, and saved configs. Learn about ${link('/blog/hwid-spoofer-explained', 'HWID Spoofer')} and ${link('/blog/streamproof-guide', 'StreamProof')}.`,
-          `ZADEYO operates in External mode — the safest architecture for DBD. Toggle every feature individually from the menu. English menu, Menu Key bind, and Cloud-DMA support for advanced setups. Read ${link('/blog/external-cheat-architecture', 'external cheat architecture guide')}.`,
+          ` operates in External mode — the safest architecture for DBD. Toggle every feature individually from the menu. English menu, Menu Key bind, and Cloud-DMA support for advanced setups. Read ${link('/blog/external-cheat-architecture', 'external cheat architecture guide')}.`,
         ],
       },
       {
-        heading: 'What You Get With Zadeyo DBD',
+        heading: 'What You Get With DBD',
         paragraphs: [
-          `Zadeyo ships the complete DBD cheat package — no upsells, no locked tiers. World ESP, player ESP, exploit modules, spoofer, unlocker, and StreamProof all load from one external overlay. View every module on the ${link('/cheats', 'cheats page')}.`,
+          `The package ships the complete DBD cheat package — no upsells, no locked tiers. World ESP, player ESP, exploit modules, spoofer, unlocker, and StreamProof all load from one external overlay. View every module on the ${link('/cheats', 'cheats page')}.`,
           `Player side: Box ESP, Name ESP, Character Name, Held Item, Borrowed Time Indicator, Distance, and Player Aura. World side: Generators, Chests, Exits, Pallets, Totems, Hatches, Hooks, Traps, and Windows — all wallhack-enabled. New to cheats? Start with the ${link('/blog/dbd-beginners-guide', 'beginner setup guide')}.`,
         ],
       },
     ],
     {
       src: '/hero-cheat-menu.webp',
-      alt: 'Zadeyo DBD cheat menu — ESP, wallhack, and exploit overlay',
+      alt: 'DBD cheat menu — ESP, wallhack, and exploit overlay',
       width: 1200,
       height: 503,
     },
@@ -222,7 +222,7 @@ function faqStaticHtml(route) {
     .join('\n      ')
 
   const article = `<article class="static-page-content">
-      ${h1('Zadeyo DBD Cheat FAQ')}
+      ${h1('DBD Cheat FAQ')}
       ${pHtml(`${escapeHtml(route.description)} Need modules or pricing? Visit ${link('/cheats', 'cheat modules')} and ${link('/buy', 'buy page')}.`)}
       ${items}
     </article>`
@@ -232,7 +232,7 @@ function faqStaticHtml(route) {
 
 function cheatsStaticHtml(route) {
   const article = `<article class="static-page-content">
-      ${h1('Zadeyo DBD Cheats — Full Module Breakdown')}
+      ${h1('DBD Cheats — Full Module Breakdown')}
       ${pHtml(`${escapeHtml(route.description)} Ready to purchase? See ${link('/buy', 'pricing')} or read ${link('/blog/dbd-beginners-guide', 'setup guide')}.`)}
       ${cheatsModuleSections()}
     </article>`
@@ -243,8 +243,8 @@ function cheatsStaticHtml(route) {
 function buyStaticHtml(route) {
   const features = buyFeatureDescriptions()
   const article = `<article class="static-page-content">
-      ${h1('Buy Zadeyo DBD Cheats')}
-      ${pHtml(`${escapeHtml(route.description)} Review ${link('/cheats', 'all cheat modules')} and ${link('/faq', 'FAQ')} before checkout. Official store: ${link(siteConfig.checkoutUrl, 'Purchase on Zadeyo', true)}.`)}
+      ${h1('Buy DBD Cheats')}
+      ${pHtml(`${escapeHtml(route.description)} Review ${link('/cheats', 'all cheat modules')} and ${link('/faq', 'FAQ')} before checkout. Official store: ${link(siteConfig.checkoutUrl, 'Purchase through checkout', true)}.`)}
       ${features
         .slice(0, 8)
         .map((text, index) => `<section><h2>Included Feature ${index + 1}</h2>${p(text)}</section>`)
@@ -278,10 +278,10 @@ function articleStaticHtml(route) {
 
   const article = `<article class="static-page-content">
       ${h1(route.headline)}
-      ${pHtml(`${escapeHtml(route.description)} ${link('/blog', 'All DBD cheat guides')} · ${link('/cheats', 'Cheat modules')} · ${link('/buy', 'Buy Zadeyo DBD')}.`)}
+      ${pHtml(`${escapeHtml(route.description)} ${link('/blog', 'All DBD cheat guides')} · ${link('/cheats', 'Cheat modules')} · ${link('/buy', 'Buy DBD')}.`)}
       ${body}
       <section class="static-page-related">
-        <h2>Related Zadeyo DBD Guides</h2>
+        <h2>Related DBD Guides</h2>
         <ul>${related}</ul>
       </section>
     </article>`
@@ -291,10 +291,10 @@ function articleStaticHtml(route) {
 
 function genericStaticHtml(route) {
   const article = `<article class="static-page-content">
-      ${h1(route.title.replace(/\s\|\sZADEYO$/, ''))}
+      ${h1(route.title.replace(/\s\|\s$/, ''))}
       ${p(route.description)}
-      ${pHtml(`Zadeyo DBD Cheats is an independent resource for Dead by Daylight external cheat features, setup guides, pricing, compatibility notes, and support links. Explore ${link('/cheats', 'cheat modules')}, ${link('/buy', 'purchase options')}, ${link('/faq', 'FAQ answers')}, and ${link('/blog', 'blog guides')}.`)}
-      ${pHtml(`All Zadeyo subscriptions include external ESP, World ESP wallhack, exploit modules, HWID Spoofer, Cosmetic Unlocker, StreamProof, loader updates, and Discord support. Visit the ${link('/buy', 'buy page')} for pricing or the ${link('/cheats', 'cheats page')} for the full module list.`)}
+      ${pHtml(`DBD Cheats is an independent resource for Dead by Daylight external cheat features, setup guides, pricing, compatibility notes, and support links. Explore ${link('/cheats', 'cheat modules')}, ${link('/buy', 'purchase options')}, ${link('/faq', 'FAQ answers')}, and ${link('/blog', 'blog guides')}.`)}
+      ${pHtml(`All subscriptions include external ESP, World ESP wallhack, exploit modules, HWID Spoofer, Cosmetic Unlocker, StreamProof, loader updates, and Discord support. Visit the ${link('/buy', 'buy page')} for pricing or the ${link('/cheats', 'cheats page')} for the full module list.`)}
     </article>`
 
   return wrapStaticPage(route, article)

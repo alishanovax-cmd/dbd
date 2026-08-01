@@ -8,6 +8,7 @@ import {
   ReviewsHeroSection,
   ReviewsHonestySection,
 } from '../components/sections/reviews'
+import { homeNavLink } from '../data/navigation'
 import { pageSeo } from '../data/seo'
 
 export function ReviewsPage() {
@@ -19,15 +20,15 @@ export function ReviewsPage() {
           ...globalSchemas(),
           webPageSchema(pageSeo.reviews.title, pageSeo.reviews.description, pageSeo.reviews.path),
           breadcrumbSchema([
-            { name: 'Home', path: '/' },
-            { name: 'Customer Feedback', path: '/reviews' },
+            { name: homeNavLink.label, path: homeNavLink.href },
+            { name: 'DBD Cheats Reviews', path: '/reviews' },
           ]),
         ]}
       />
       <Breadcrumbs
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Customer Feedback' },
+          { label: homeNavLink.label, href: homeNavLink.href },
+          { label: 'DBD Cheats Reviews' },
         ]}
       />
       <ReviewsHeroSection />

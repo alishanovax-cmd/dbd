@@ -32,7 +32,7 @@ export function FeaturesSection() {
           </SectionHeading>
           <span className="accent-line accent-line--wide" />
           <p className="body-text features-stack__intro">
-            Watch the Zadeyo external overlay in action — ESP, wallhack, and exploit modules running live in DBD.
+            Watch the external overlay in action — ESP, wallhack, and exploit modules running live in DBD.
           </p>
         </ScrollReveal>
 
@@ -44,7 +44,7 @@ export function FeaturesSection() {
                 <InlineVideo
                   className="features-stack__video"
                   poster={assets.atmosphere1}
-                  label="Zadeyo DBD cheat features preview — ESP and wallhack demo"
+                  label="DBD cheat features preview — ESP and wallhack demo"
                 />
                 <div className="features-stack__video-scan" aria-hidden="true" />
               </div>
@@ -54,7 +54,7 @@ export function FeaturesSection() {
               </div>
             </div>
             <figcaption className="features-stack__video-caption">
-              Zadeyo external overlay — ESP, wallhack, and exploit modules running in Dead by Daylight.
+              External cheat overlay — ESP, wallhack, and exploit modules running in Dead by Daylight.
             </figcaption>
           </figure>
         </ScrollReveal>

@@ -1,12 +1,12 @@
 export const buyPage = {
   hero: {
-    eyebrow: 'Zadeyo · Buy DBD Cheat',
-    titleLine1: 'Buy Zadeyo DBD Cheats',
+    eyebrow: 'DBD · Buy DBD Cheat',
+    titleLine1: 'Buy DBD Cheats',
     titleLine2: 'ESP, Aimbot & Wallhack',
     description:
-      'Full Zadeyo external cheat — World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, StreamProof. $35/month or $150 lifetime. Instant loader delivery.',
+      'Full external cheat — World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, StreamProof. $35/month or $150 lifetime. Instant loader delivery.',
     galleryCaption:
-      'Zadeyo live overlay: player ESP boxes, World ESP object tags, held item readouts, exploit toggles, and custom color settings — all from the in-game cheat menu.',
+      'Live cheat overlay: player ESP boxes, World ESP object tags, held item readouts, exploit toggles, and custom color settings — all from the in-game cheat menu.',
     statusPills: [
       { label: 'Undetected · External Cheat', pulse: true },
       { label: '$35/month · $150 Lifetime' },
@@ -14,7 +14,7 @@ export const buyPage = {
   },
   features: {
     label: 'Cheat Features',
-    title: 'Full Zadeyo Feature List.',
+    title: 'Full Feature List.',
     subtitle: 'Every feature included — no tiers, no upsells. One price, complete cheat suite.',
     items: [
       {
@@ -51,7 +51,7 @@ export const buyPage = {
       },
       {
         name: 'StreamProof',
-        description: 'Hides the entire Zadeyo overlay from OBS and recording software.',
+        description: 'Hides the entire cheat overlay from OBS and recording software.',
       },
       {
         name: 'FOV Changer',
@@ -63,7 +63,7 @@ export const buyPage = {
       },
       {
         name: '24/7 Discord Support',
-        description: 'Zadeyo support team available around the clock for setup and configs.',
+        description: 'Support team available around the clock for setup and configs.',
       },
     ],
   },
@@ -81,10 +81,10 @@ export const buyPage = {
   },
   faq: {
     label: 'FAQ',
-    title: 'Zadeyo DBD Cheat — FAQ',
+    title: 'DBD Cheat — FAQ',
   },
   cta: {
-    title: 'Get Zadeyo DBD Cheat Now',
+    title: 'Get DBD Cheat Now',
     description: 'Instant loader after checkout. Full ESP, exploits, unlocker, and spoofer included.',
   },
 } as const

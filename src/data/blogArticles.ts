@@ -36,8 +36,8 @@ const blogImages = {
 export const blogArticles: BlogArticle[] = [
   {
     slug: 'dbd-esp-guide',
-    title: 'Zadeyo ESP Setup Guide — Box, Name & Aura Wallhack',
-    excerpt: 'Configure Zadeyo player ESP — Box ESP, Name ESP, distance, held item, and aura wallhack settings.',
+    title: 'DBD ESP Setup Guide — Box, Name & Aura Wallhack',
+    excerpt: 'Configure Player ESP — Box ESP, Name ESP, distance, held item, and aura wallhack settings.',
     category: 'esp',
     date: 'May 13, 2024',
     readTime: '5 min read',
@@ -45,7 +45,7 @@ export const blogArticles: BlogArticle[] = [
     content: [
       {
         type: 'p',
-        text: 'Zadeyo player ESP is the core of the DBD cheat. Enable Box ESP for 2D bounding boxes on every survivor and killer through walls. Add Name ESP to show character names on the overlay.',
+        text: 'Player ESP is the core of the DBD cheat. Enable Box ESP for 2D bounding boxes on every survivor and killer through walls. Add Name ESP to show character names on the overlay.',
       },
       {
         type: 'h2',
@@ -57,11 +57,11 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'h2',
-        text: 'Configure ESP in the Zadeyo Menu',
+        text: 'Configure ESP in the cheat menu',
       },
       {
         type: 'p',
-        text: 'Open the Zadeyo menu with your Menu Key bind. Navigate to Player ESP tab. Toggle each feature individually and assign custom colors per player type — survivor, killer, hooked.',
+        text: 'Open the cheat menu with your Menu Key bind. Navigate to Player ESP tab. Toggle each feature individually and assign custom colors per player type — survivor, killer, hooked.',
       },
       {
         type: 'h2',
@@ -69,14 +69,14 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Save your config after setup. Zadeyo stores profiles locally so you can swap between Survivor ESP and Killer ESP layouts without reconfiguring every session.',
+        text: 'Save your config after setup. official stores profiles locally so you can swap between Survivor ESP and Killer ESP layouts without reconfiguring every session.',
       },
     ],
   },
   {
     slug: 'world-esp-guide',
-    title: 'Zadeyo World ESP — Generator, Totem & Hook Wallhack',
-    excerpt: 'Enable and configure every World ESP object in the Zadeyo cheat menu.',
+    title: 'World ESP — Generator, Totem & Hook Wallhack',
+    excerpt: 'Enable and configure every World ESP object in the cheat menu.',
     category: 'esp',
     date: 'Jun 2, 2024',
     readTime: '6 min read',
@@ -84,7 +84,7 @@ export const blogArticles: BlogArticle[] = [
     content: [
       {
         type: 'p',
-        text: 'Zadeyo World ESP wallhacks every interactive object in DBD: generators, chests, exits, pallets, totems, hatches, hooks, traps, and windows.',
+        text: 'World ESP wallhacks every interactive object in DBD: generators, chests, exits, pallets, totems, hatches, hooks, traps, and windows.',
       },
       {
         type: 'h2',
@@ -92,7 +92,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'In the Zadeyo menu, open World ESP and enable each object type. Assign distinct colors — yellow for generators, red for totems, green for exits — so labels never overlap visually.',
+        text: 'In the cheat menu, open World ESP and enable each object type. Assign distinct colors — yellow for generators, red for totems, green for exits — so labels never overlap visually.',
       },
       {
         type: 'h2',
@@ -108,14 +108,14 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Combine World ESP with player ESP for the full Zadeyo wallhack experience. Both modules run from the same external overlay with zero extra cost.',
+        text: 'Combine World ESP with player ESP for the full wallhack experience. Both modules run from the same external overlay with zero extra cost.',
       },
     ],
   },
   {
     slug: 'dbd-beginners-guide',
-    title: 'Zadeyo DBD Cheat — First-Time Setup Guide',
-    excerpt: 'Buy, install, and activate the Zadeyo loader. Enable your first ESP features in under 10 minutes.',
+    title: 'DBD Cheat — First-Time Setup Guide',
+    excerpt: 'Buy, install, and activate the loader. Enable your first ESP features in under 10 minutes.',
     category: 'guide',
     date: 'Jul 8, 2024',
     readTime: '8 min read',
@@ -123,7 +123,7 @@ export const blogArticles: BlogArticle[] = [
     content: [
       {
         type: 'p',
-        text: 'Step 1: Purchase at zadeyo.com/products/dbd-cheats — $35/month or $150 lifetime. Your order page shows the loader download immediately after payment.',
+        text: 'Step 1: Purchase through checkout — $35/month or $150 lifetime. Your order page shows the loader download immediately after payment.',
       },
       {
         type: 'h2',
@@ -131,7 +131,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Step 2: Verify system requirements — HVCI, Core Isolation, TPM, and Secure Boot must be ON. The Zadeyo setup guide walks through each Windows setting.',
+        text: 'Step 2: Verify system requirements — HVCI, Core Isolation, TPM, and Secure Boot must be ON. The setup guide walks through each Windows setting.',
       },
       {
         type: 'h2',
@@ -139,7 +139,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Step 3: Run the Zadeyo loader as administrator. Inject the external overlay, launch DBD, and press your Menu Key in the lobby.',
+        text: 'Step 3: Run the loader as administrator. Inject the external overlay, launch DBD, and press your Menu Key in the lobby.',
       },
       {
         type: 'h2',
@@ -147,14 +147,14 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Step 4: Enable Box ESP, Name ESP, and Generator ESP first. Avoid SpeedHack and High Jump until you confirm the cheat is stable on your system. Join Zadeyo Discord for live setup help.',
+        text: 'Step 4: Enable Box ESP, Name ESP, and Generator ESP first. Avoid SpeedHack and High Jump until you confirm the cheat is stable on your system. Join Discord for live setup help.',
       },
     ],
   },
   {
     slug: 'hwid-spoofer-explained',
-    title: 'Zadeyo HWID Spoofer — Bypass Hardware Bans',
-    excerpt: 'How the included Zadeyo HWID Spoofer protects your PC from hardware bans.',
+    title: 'HWID Spoofer — Bypass Hardware Bans',
+    excerpt: 'How the included HWID Spoofer protects your PC from hardware bans.',
     category: 'spoofing',
     date: 'Aug 1, 2024',
     readTime: '4 min read',
@@ -162,7 +162,7 @@ export const blogArticles: BlogArticle[] = [
     content: [
       {
         type: 'p',
-        text: 'Hardware bans tie restrictions to your PC components — not just your game account. The Zadeyo HWID Spoofer masks disk serials, motherboard ID, and MAC address before you launch DBD.',
+        text: 'Hardware bans tie restrictions to your PC components — not just your game account. The HWID Spoofer masks disk serials, motherboard ID, and MAC address before you launch DBD.',
       },
       {
         type: 'h2',
@@ -170,7 +170,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Enable HWID Spoofer in the Zadeyo menu before every session if you have a prior ban history. The spoofer runs alongside the ESP overlay from the same loader — no extra purchase required.',
+        text: 'Enable HWID Spoofer in the cheat menu before every session if you have a prior ban history. The spoofer runs alongside the ESP overlay from the same loader — no extra purchase required.',
       },
       {
         type: 'h2',
@@ -178,7 +178,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Restart the spoofer after Windows updates or hardware changes. Zadeyo Discord support can verify your spoofer is active if you are unsure.',
+        text: 'Restart the spoofer after Windows updates or hardware changes. Discord support can verify your spoofer is active if you are unsure.',
       },
       {
         type: 'h2',
@@ -192,8 +192,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'staying-updated-after-patches',
-    title: 'Zadeyo Loader Updates After DBD Patches',
-    excerpt: 'Keep your Zadeyo cheat build current after every DBD patch day.',
+    title: 'loader Updates After DBD Patches',
+    excerpt: 'Keep your  cheat build current after every DBD patch day.',
     category: 'safety',
     date: 'Sep 12, 2024',
     readTime: '5 min read',
@@ -201,7 +201,7 @@ export const blogArticles: BlogArticle[] = [
     content: [
       {
         type: 'p',
-        text: 'DBD patches can break cheat offsets. Zadeyo pushes loader updates as fast as possible after every Behaviour patch — check your Zadeyo order page and Discord on patch days.',
+        text: 'DBD patches can break cheat offsets. Updates ship loader updates as fast as possible after every Behaviour patch — check your order page and Discord on patch days.',
       },
       {
         type: 'h2',
@@ -209,7 +209,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Symptoms of an outdated Zadeyo build: missing ESP boxes, frozen overlay, or loader failing to attach. Do not play on an old build — update first.',
+        text: 'Symptoms of an outdated loader build: missing ESP boxes, frozen overlay, or loader failing to attach. Do not play on an old build — update first.',
       },
       {
         type: 'h2',
@@ -217,7 +217,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Best practice: pause ranked sessions on patch day, download the new Zadeyo loader, test in a private match, then re-enable your full ESP and exploit config.',
+        text: 'Best practice: pause ranked sessions on patch day, download the new loader, test in a private match, then re-enable your full ESP and exploit config.',
       },
       {
         type: 'h2',
@@ -225,14 +225,14 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Zadeyo Discord posts update notifications with download links. Enable notifications so you never miss a critical patch-day build.',
+        text: 'Discord posts update notifications with download links. Enable notifications so you never miss a critical patch-day build.',
       },
     ],
   },
   {
     slug: 'best-dbd-cheat-2026',
-    title: 'Best DBD Cheat 2026 — Why Zadeyo Wins',
-    excerpt: 'Compare DBD cheat providers. Zadeyo external ESP, full feature list, and pricing breakdown.',
+    title: 'Best DBD Cheat 2026 — Why This Package Wins',
+    excerpt: 'Compare DBD cheat providers.  external ESP, full feature list, and pricing breakdown.',
     category: 'comparison',
     date: 'Jan 15, 2026',
     readTime: '7 min read',
@@ -240,7 +240,7 @@ export const blogArticles: BlogArticle[] = [
     content: [
       {
         type: 'p',
-        text: 'The best DBD cheat in 2026 needs external architecture, full ESP coverage, exploit modules, unlocker, spoofer, and fast patch support — Zadeyo delivers all of this at $35/month.',
+        text: 'The best DBD cheat in 2026 needs external architecture, full ESP coverage, exploit modules, unlocker, spoofer, and fast patch support — This package delivers all of this at $35/month.',
       },
       {
         type: 'h2',
@@ -248,7 +248,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Competitors often lock Cosmetic Unlocker or HWID Spoofer behind premium tiers. Zadeyo includes every feature in one subscription — World ESP, Box ESP, Auto Skill Check, SpeedHack, StreamProof, Cloud-DMA.',
+        text: 'Competitors often lock Cosmetic Unlocker or HWID Spoofer behind premium tiers. Every plan includes every feature in one subscription — World ESP, Box ESP, Auto Skill Check, SpeedHack, StreamProof, Cloud-DMA.',
       },
       {
         type: 'h2',
@@ -256,22 +256,22 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Compare on: external vs internal, update speed after patches, Discord support quality, and honest product documentation. No cheat is ban-proof — Zadeyo documents features transparently on the official store.',
+        text: 'Compare on: external vs internal, update speed after patches, Discord support quality, and honest product documentation. No cheat is ban-proof — Official docs describe features transparently on the official store.',
       },
       {
         type: 'h2',
-        text: 'Why Zadeyo Is a Strong Choice in 2026',
+        text: 'Why This Package Is a Strong Choice in 2026',
       },
       {
         type: 'p',
-        text: 'External safety, instant delivery, and full feature coverage at $35/month make Zadeyo a leading DBD cheat option — confirm current details on zadeyo.com before buying.',
+        text: 'External safety, instant delivery, and full feature coverage at $35/month make this a leading DBD cheat option — confirm current details through official checkout before buying.',
       },
     ],
   },
   {
     slug: 'aimbot-setup-guide',
-    title: 'Zadeyo Auto Skill Check & Exploit Setup',
-    excerpt: 'Configure Auto Skill Check, Instant Animation, SpeedHack, and High Jump in Zadeyo.',
+    title: 'Auto Skill Check & Exploit Setup',
+    excerpt: 'Configure Auto Skill Check, Instant Animation, SpeedHack, and High Jump in Checkout.',
     category: 'aimbot',
     date: 'Feb 3, 2025',
     readTime: '5 min read',
@@ -279,7 +279,7 @@ export const blogArticles: BlogArticle[] = [
     content: [
       {
         type: 'p',
-        text: 'Zadeyo includes Auto Skill Check for automatic great skill check hits during generator repairs and healing. Enable it in the Exploits tab of the Zadeyo menu.',
+        text: 'Every plan includes Auto Skill Check for automatic great skill check hits during generator repairs and healing. Enable it in the Exploits tab of the cheat menu.',
       },
       {
         type: 'h2',
@@ -309,8 +309,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'behaviour-anticheat-analysis',
-    title: 'DBD Anti-Cheat vs Zadeyo External Cheat',
-    excerpt: 'Why Zadeyo external architecture beats internal injectors for DBD safety.',
+    title: 'DBD Anti-Cheat vs External DBD Cheats Cheat',
+    excerpt: 'Why DBD Cheats external architecture beats internal injectors for DBD safety.',
     category: 'anti-cheat',
     date: 'Mar 20, 2025',
     readTime: '6 min read',
@@ -326,7 +326,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Zadeyo runs external: a separate overlay process reads game memory and draws ESP without touching the game executable. This bypasses most process-level scans.',
+        text: 'The cheat runs external: a separate overlay process reads game memory and draws ESP without touching the game executable. This bypasses most process-level scans.',
       },
       {
         type: 'h2',
@@ -338,18 +338,18 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'h2',
-        text: 'The Complete Zadeyo Safety Stack',
+        text: 'The Complete Safety Stack',
       },
       {
         type: 'p',
-        text: 'Zadeyo combines external architecture with regular signature updates, HWID Spoofer, and StreamProof — the complete safety stack for DBD cheating.',
+        text: 'The stack combines external architecture with regular signature updates, HWID Spoofer, and StreamProof — the complete safety stack for DBD cheating.',
       },
     ],
   },
   {
     slug: 'external-cheat-architecture',
-    title: 'Why Zadeyo Uses External Cheat Architecture',
-    excerpt: 'External vs internal cheats for DBD — how Zadeyo keeps detection risk low.',
+    title: 'Why External Architecture Works External Cheat Architecture',
+    excerpt: 'External vs internal cheats for DBD — how external cheats keep detection risk low.',
     category: 'technical',
     date: 'Apr 10, 2025',
     readTime: '5 min read',
@@ -357,7 +357,7 @@ export const blogArticles: BlogArticle[] = [
     content: [
       {
         type: 'p',
-        text: 'External cheats like Zadeyo run as a standalone process. They read DBD memory externally and render an overlay on top of the game window — no code injection into the game.',
+        text: 'External cheats like this run as a standalone process. They read DBD memory externally and render an overlay on top of the game window — no code injection into the game.',
       },
       {
         type: 'h2',
@@ -365,7 +365,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Internal cheats hook game functions directly, leaving detectable traces that anti-cheat scans target first. Zadeyo avoids this entirely with external architecture.',
+        text: 'Internal cheats hook game functions directly, leaving detectable traces that anti-cheat scans target first. External mode avoids this entirely with external architecture.',
       },
       {
         type: 'h2',
@@ -373,7 +373,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Zadeyo also supports Cloud-DMA for advanced users who want hardware-level memory access. This adds another layer of separation between the cheat and the game process.',
+        text: 'The loader also supports Cloud-DMA for advanced users who want hardware-level memory access. This adds another layer of separation between the cheat and the game process.',
       },
       {
         type: 'h2',
@@ -381,14 +381,14 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Trade-off: external cheats need offset updates after patches. Zadeyo ships loader updates quickly on patch day to keep ESP and exploits working on the latest build.',
+        text: 'Trade-off: external cheats need offset updates after patches. The package ships loader updates quickly on patch day to keep ESP and exploits working on the latest build.',
       },
     ],
   },
   {
     slug: 'streamproof-guide',
-    title: 'Zadeyo StreamProof — Hide Cheat From OBS',
-    excerpt: 'Enable StreamProof in Zadeyo to hide the ESP overlay from recording software.',
+    title: 'StreamProof — Hide Cheat From OBS',
+    excerpt: 'Enable StreamProof in the cheat menu to hide the ESP overlay from recording software.',
     category: 'guide',
     date: 'May 5, 2025',
     readTime: '4 min read',
@@ -396,7 +396,7 @@ export const blogArticles: BlogArticle[] = [
     content: [
       {
         type: 'p',
-        text: 'StreamProof is built into every Zadeyo subscription. Toggle it in the Zadeyo menu before starting OBS or Streamlabs — the entire ESP overlay becomes invisible to capture software.',
+        text: 'StreamProof is built into every subscription. Toggle it in the cheat menu before starting OBS or Streamlabs — the entire ESP overlay becomes invisible to capture software.',
       },
       {
         type: 'h2',

@@ -1,10 +1,10 @@
 export const faqPage = {
   hero: {
-    eyebrow: 'Zadeyo · Support',
-    titleLine1: 'Zadeyo DBD Cheat',
+    eyebrow: 'DBD · Support',
+    titleLine1: 'DBD Cheat',
     titleLine2: 'FAQ & Safety Policy',
     description:
-      'Answers about Zadeyo DBD cheat detection status, ESP modules, HWID Spoofer, StreamProof, platform support, and loader requirements. Honest limits — no ban guarantees.',
+      'Answers about DBD cheat detection status, ESP modules, HWID Spoofer, StreamProof, platform support, and loader requirements. Honest limits — no ban guarantees.',
   },
   list: {
     label: 'Questions',
@@ -14,6 +14,6 @@ export const faqPage = {
   },
   cta: {
     title: 'Still have questions?',
-    description: 'Join Zadeyo Discord for setup help or open a ticket on the official support portal.',
+    description: 'Join Discord for setup help or open a ticket on the official support portal.',
   },
 } as const

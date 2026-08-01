@@ -49,7 +49,7 @@ export function VisualsSection() {
         <ScrollReveal delay={80}>
           <img
             src={assets.espWallhack}
-            alt="Zadeyo DBD ESP wallhack preview — survivor and killer overlay in Dead by Daylight"
+            alt="DBD ESP wallhack preview — survivor and killer overlay in Dead by Daylight"
             loading="lazy"
             decoding="async"
             width={imageDimensions.espWallhack.width}

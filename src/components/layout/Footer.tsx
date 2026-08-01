@@ -56,7 +56,7 @@ export function Footer() {
         <section className="site-footer__hero glass-card" aria-labelledby="footer-cta-heading">
           <div className="site-footer__hero-frame" aria-hidden="true" />
           <div className="site-footer__hero-head">
-            <Link to="/" className="site-logo" aria-label="Zadeyo home">
+            <Link to="/" className="site-logo" aria-label="DBD Cheats home">
               <BrandLogo className="brand-logo--footer" />
             </Link>
           </div>
@@ -67,9 +67,9 @@ export function Footer() {
                 {siteConfig.tagline} for DBD
               </h2>
               <p className="site-footer__pitch">
-                Zadeyo private external cheat for Dead by Daylight — World ESP, Box ESP, Auto Skill Check,
-                SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof. Instant loader delivery on
-                Zadeyo.
+                private external DBD cheat for Dead by Daylight — World ESP, Box ESP, Auto Skill Check,
+                SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof. Instant loader delivery at
+                checkout.
               </p>
               <div className="site-footer__stats">
                 {footerStats.map((stat) => (
@@ -168,10 +168,10 @@ export function Footer() {
 
         <div className="site-footer__trust glass-card">
           <p className="site-footer__trust-main">
-            <strong>Zadeyo DBD Cheats</strong> — independent resource for Dead by Daylight external cheat
+            <strong>DBD Cheats</strong> — independent resource for Dead by Daylight external cheat
             features, setup guides, and pricing.             Purchases and refunds are handled on{' '}
             <a href={siteConfig.zadeyoUrl} target="_blank" rel="noopener noreferrer">
-              zadeyo.com
+              the official store
             </a>{' '}
             via the{' '}
             <a href={siteConfig.checkoutUrl} target="_blank" rel="noopener noreferrer">
@@ -179,11 +179,11 @@ export function Footer() {
             </a>
             . Support via{' '}
             <a href={siteConfig.discordUrl} target="_blank" rel="noopener noreferrer">
-              Zadeyo Discord
+              Discord
             </a>{' '}
             and the{' '}
             <a href={siteConfig.supportUrl} target="_blank" rel="noopener noreferrer">
-              Zadeyo support portal
+              Support portal
             </a>
             .
           </p>

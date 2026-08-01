@@ -67,7 +67,7 @@ export function SeoHead({ seo, jsonLd }: SeoHeadProps) {
 
     upsertMeta('description', seo.description)
     upsertMeta('author', seo.path === '/' ? homeSeo.siteName : siteConfig.fullName)
-    upsertMeta('robots', seo.noindex ? 'noindex, nofollow' : 'index, follow')
+    upsertMeta('robots', seo.noindex ? 'noindex, nofollow' : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1')
 
     upsertMeta('og:title', seo.title, true)
     upsertMeta('og:description', seo.description, true)
@@ -75,7 +75,7 @@ export function SeoHead({ seo, jsonLd }: SeoHeadProps) {
     upsertMeta('og:url', canonical, true)
     upsertMeta('og:site_name', siteName, true)
     upsertMeta('og:image', imageUrl, true)
-    upsertMeta('og:image:alt', seo.path === '/' ? 'Zadeyo logo — DBD Cheats' : `${siteConfig.fullName} — ${seo.title}`, true)
+    upsertMeta('og:image:alt', seo.path === '/' ? 'DBD Cheats logo' : `${siteConfig.fullName} — ${seo.title}`, true)
     upsertMeta('og:image:width', String(imageDimensionsForPage.width), true)
     upsertMeta('og:image:height', String(imageDimensionsForPage.height), true)
     upsertMeta('og:locale', 'en_US', true)

@@ -1,4 +1,4 @@
-import { copyFileSync, existsSync, mkdirSync } from 'node:fs'
+import { copyFileSync, existsSync } from 'node:fs'
 
 /** Google Search favicon + logo files must exist in dist for Cloudflare deploy. */
 const SEO_ASSETS = [
@@ -10,6 +10,8 @@ const SEO_ASSETS = [
   'zadeyo-logo.webp',
   'og-logo.png',
   'manifest.webmanifest',
+  '_redirects',
+  '_headers',
 ]
 
 if (!existsSync('dist')) {

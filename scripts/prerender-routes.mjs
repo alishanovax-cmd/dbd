@@ -67,6 +67,14 @@ function routeOgDimensions(route) {
   return ogDimensions
 }
 
+function absolutizeIconUrls(html, origin) {
+  const base = origin.replace(/\/$/, '')
+  return html.replace(
+    /(<link rel="(?:icon|shortcut icon|apple-touch-icon|manifest)"[^>]*href=")(\/[^"]+)(")/g,
+    `$1${base}$2$3`,
+  )
+}
+
 function injectSeo(html, route) {
   const canonical = canonicalFor(siteUrl, route.path)
   const image = routeImage(route)
@@ -83,25 +91,32 @@ function injectSeo(html, route) {
       ? `
     <meta property="article:published_time" content="${escapeAttr(parseArticleDate(route.date))}" />
     <meta property="article:modified_time" content="${escapeAttr(modifiedTime)}" />
-    <meta property="article:author" content="ZADEYO" />
+    <meta property="article:author" content="DBD Cheats" />
     <meta property="article:section" content="DBD Cheat Guides" />`
       : ''
 
+  const twitterCard =
+    route.ogImage === 'og-logo.png' ||
+    (imageDimensionsForRoute.width <= 512 && imageDimensionsForRoute.height <= 512)
+      ? 'summary'
+      : 'summary_large_image'
+  const pageAuthor = route.siteName ?? siteConfig.seoSiteName
+
   const seoBlock = `
     <meta name="description" content="${escapeAttr(route.description)}" />
-    <meta name="author" content="Zadeyo DBD Cheats" />
-    <meta name="robots" content="index, follow" />
+    <meta name="author" content="${escapeAttr(pageAuthor)}" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta property="og:title" content="${escapeAttr(route.title)}" />
     <meta property="og:description" content="${escapeAttr(route.description)}" />
     <meta property="og:type" content="${ogType}" />
     <meta property="og:url" content="${escapeAttr(canonical)}" />
-    <meta property="og:site_name" content="${escapeAttr(route.siteName ?? 'Zadeyo DBD Cheats')}" />
+    <meta property="og:site_name" content="${escapeAttr(route.siteName ?? 'DBD Cheats')}" />
     <meta property="og:image" content="${escapeAttr(image)}" />
     <meta property="og:image:alt" content="${escapeAttr(route.title)}" />
     <meta property="og:image:width" content="${imageDimensionsForRoute.width}" />
     <meta property="og:image:height" content="${imageDimensionsForRoute.height}" />
     <meta property="og:locale" content="en_US" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="${twitterCard}" />
     <meta name="twitter:title" content="${escapeAttr(route.title)}" />
     <meta name="twitter:description" content="${escapeAttr(route.description)}" />
     <meta name="twitter:image" content="${escapeAttr(image)}" />${articleMeta}
@@ -113,11 +128,11 @@ function injectSeo(html, route) {
   let output = stripSeoTags(html)
   output = output.replace(/<title>[\s\S]*?<\/title>/, `<title>${route.title}</title>`)
   output = output.replace(
-    '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
-    `<meta name="viewport" content="width=device-width, initial-scale=1.0" />${seoBlock}`,
+    '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />',
+    `<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />${seoBlock}`,
   )
   output = output.replace('<!--PRERENDER_BODY-->', buildStaticBody(route))
-  return output
+  return absolutizeIconUrls(output, siteUrl)
 }
 
 if (!existsSync('dist/index.html')) {

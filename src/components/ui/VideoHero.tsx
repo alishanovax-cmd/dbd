@@ -58,7 +58,7 @@ export function VideoHero({ className = '' }: VideoHeroProps) {
             loop
             playsInline
             preload="none"
-            aria-label="Zadeyo DBD cheat preview video"
+            aria-label="DBD cheat preview video"
             onPlay={() => setPlaying(true)}
             onPause={() => setPlaying(false)}
             onError={() => setFailed(true)}

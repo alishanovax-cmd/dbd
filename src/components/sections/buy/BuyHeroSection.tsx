@@ -8,8 +8,8 @@ import { SectionHeading } from '../../ui/SectionHeading'
 import { VideoHero } from '../../ui/VideoHero'
 
 const galleryImages = [
-  { src: assets.atmosphere1, alt: 'Zadeyo DBD ESP wallhack — in-match survivor tracking' },
-  { src: assets.cheatMenu, alt: 'Zadeyo DBD cheat menu — ESP and exploit overlay' },
+  { src: assets.atmosphere1, alt: 'DBD ESP wallhack — in-match survivor tracking' },
+  { src: assets.cheatMenu, alt: 'DBD cheat menu — ESP and exploit overlay' },
 ] as const
 
 export function BuyHeroSection() {

@@ -9,7 +9,7 @@ import { FilterPill } from '../components/ui/BlogCard'
 import { ScrollReveal } from '../components/ui/ScrollReveal'
 import { SectionHeading } from '../components/ui/SectionHeading'
 import { blogPosts } from '../data/blogArticles'
-import { blogCategories, type BlogCategory } from '../data/navigation'
+import { blogCategories, homeNavLink, type BlogCategory } from '../data/navigation'
 import { pageSeo } from '../data/seo'
 
 export function BlogPage() {
@@ -28,16 +28,16 @@ export function BlogPage() {
           ...globalSchemas(),
           webPageSchema(pageSeo.blog.title, pageSeo.blog.description, pageSeo.blog.path),
           breadcrumbSchema([
-            { name: 'Home', path: '/' },
-            { name: 'Zadeyo DBD Cheat Guides', path: '/blog' },
+            { name: homeNavLink.label, path: homeNavLink.href },
+            { name: 'DBD Cheat Guides', path: '/blog' },
           ]),
           blogItemListSchema(),
         ]}
       />
       <Breadcrumbs
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Zadeyo DBD Cheat Guides' },
+          { label: homeNavLink.label, href: homeNavLink.href },
+          { label: 'DBD Cheat Guides', href: '/blog' },
         ]}
       />
 
@@ -47,13 +47,13 @@ export function BlogPage() {
         <div className="container blog-hero__inner">
           <ScrollReveal>
             <SectionHeading as="h1" className="blog-hero__title">
-              Zadeyo DBD Cheat Guides
+              DBD Cheat Guides
             </SectionHeading>
             <p className="blog-hero__subtitle gradient-text">
-              ESP Setup, Spoofer &amp; Safety — Zadeyo
+              ESP Setup, Spoofer &amp; Safety — 
             </p>
             <p className="blog-hero__desc">
-              Cheat setup guides, ESP configuration, HWID spoofer info, and patch-day update notes for Zadeyo DBD.
+              Cheat setup guides, ESP configuration, HWID spoofer info, and patch-day update notes for DBD.
             </p>
           </ScrollReveal>
         </div>

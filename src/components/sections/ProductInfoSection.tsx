@@ -20,7 +20,7 @@ export function ProductInfoSection() {
           <div className="centered-section__media">
             <img
               src={assets.cheatMenu}
-              alt="Zadeyo DBD cheat feature overview — ESP and wallhack modules"
+              alt="DBD cheat feature overview — ESP and wallhack modules"
               loading="lazy"
               width={imageDimensions.cheatMenu.width}
               height={imageDimensions.cheatMenu.height}

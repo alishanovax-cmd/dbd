@@ -11,7 +11,7 @@ export function CheatOverviewSection() {
         <ScrollReveal className="split-section__media">
           <img
             src={assets.cheatOverviewImage}
-            alt="Dead by Daylight in-game desktop — Zadeyo DBD cheat package preview"
+            alt="Dead by Daylight in-game desktop — DBD cheat package preview"
             loading="lazy"
             decoding="async"
             width={imageDimensions.cheatOverviewImage.width}

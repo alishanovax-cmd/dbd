@@ -14,7 +14,7 @@ interface InlineVideoProps {
 export function InlineVideo({
   className = '',
   poster = assets.atmosphere1,
-  label = 'Zadeyo DBD cheat preview video',
+  label = 'DBD cheat preview video',
 }: InlineVideoProps) {
   const videoEnabled = hasHeroVideo()
   const [failed, setFailed] = useState(false)

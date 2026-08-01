@@ -25,7 +25,7 @@ export function ReviewsHeroSection() {
           <p className="page-hero__desc">{hero.description}</p>
           <div className="page-hero__actions">
             <Button href={siteConfig.checkoutUrl} external>
-              View on Zadeyo store
+              View on official store
             </Button>
             <Button href={siteConfig.discordUrl} external variant="ghost">
               Join Discord
@@ -103,7 +103,7 @@ export function ReviewsCtaSection() {
           <p className="body-text">{cta.description}</p>
           <div className="page-cta__actions">
             <Button href={siteConfig.checkoutUrl} external>
-              Go to Zadeyo checkout
+              Go to checkout
             </Button>
             <Button href="/cheats" variant="ghost">
               View cheat modules

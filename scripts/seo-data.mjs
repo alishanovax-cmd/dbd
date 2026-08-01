@@ -1,10 +1,10 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 
 export const siteConfig = {
-  name: 'ZADEYO',
+  name: 'DBD Cheats',
   logoFile: 'og-logo.png',
   logoWebpFile: 'zadeyo-logo.webp',
-  fullName: 'Zadeyo DBD Cheats',
+  fullName: 'DBD Cheats',
   seoSiteName: 'DBD Cheats',
   description:
     'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check, HWID spoofer, and StreamProof. From $35/month.',
@@ -14,23 +14,39 @@ export const siteConfig = {
   zadeyoUrl: 'https://zadeyo.com',
   liveUrl: 'https://dbdcheats.net',
   githubUrl: 'https://github.com/alishanovax-cmd/dbd',
-  lastUpdated: '2026-07-30',
+  lastUpdated: '2026-07-31',
+  /** Hosted at https://dbdcheats.net/{indexNowKey}.txt for IndexNow */
+  indexNowKey: 'dbd7c4a9f2e18b3d6a5c9012ef8b4d7c',
 }
 
 export const staticPages = [
   {
     path: '/',
-    title: 'DBD Cheats - Aimbot, ESP and Wallhack',
+    title: 'DBD Cheats 2026 | Aimbot, ESP & Wallhack',
     description:
-      'DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check & HWID spoofer. External cheat from $35/month with setup guides.',
+      'Official DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Auto Skill Check & HWID spoofer. From $35/month. Setup guides & modules.',
     type: 'website',
     priority: '1.0',
-    changefreq: 'weekly',
+    changefreq: 'daily',
     siteName: 'DBD Cheats',
     ogImage: 'og-logo.png',
     ogImageDimensions: { width: 512, height: 512 },
     includeProduct: true,
     includeFaq: true,
+    includeSoftwareApp: true,
+    itemList: {
+      name: 'DBD Cheat Modules',
+      items: [
+        'Player ESP',
+        'World ESP',
+        'Auto Skill Check',
+        'SpeedHack',
+        'HWID Spoofer',
+        'Cosmetic Unlocker',
+        'StreamProof',
+        'Cloud-DMA',
+      ],
+    },
   },
   {
     path: '/cheats',
@@ -41,7 +57,7 @@ export const staticPages = [
     priority: '0.9',
     changefreq: 'weekly',
     breadcrumbs: [
-      { name: 'Home', path: '/' },
+      { name: 'DBD Cheats', path: '/' },
       { name: 'DBD Cheats', path: '/cheats' },
     ],
     itemList: {
@@ -62,12 +78,12 @@ export const staticPages = [
     path: '/buy',
     title: 'Buy DBD Cheats — Pricing & Features',
     description:
-      'Buy DBD cheats for Dead by Daylight — $35/month or $150 lifetime. Full aimbot, ESP, wallhack, HWID spoofer, requirements, and instant Zadeyo checkout.',
+      'Buy DBD cheats for Dead by Daylight — $35/month or $150 lifetime. Full aimbot, ESP, wallhack, HWID spoofer, requirements, and instant checkout.',
     type: 'product',
     priority: '0.9',
     changefreq: 'weekly',
     breadcrumbs: [
-      { name: 'Home', path: '/' },
+      { name: 'DBD Cheats', path: '/' },
       { name: 'Buy DBD Cheats', path: '/buy' },
     ],
     includeProduct: true,
@@ -81,7 +97,7 @@ export const staticPages = [
     priority: '0.85',
     changefreq: 'weekly',
     breadcrumbs: [
-      { name: 'Home', path: '/' },
+      { name: 'DBD Cheats', path: '/' },
       { name: 'DBD Cheats FAQ', path: '/faq' },
     ],
     includeFaq: true,
@@ -90,12 +106,12 @@ export const staticPages = [
     path: '/reviews',
     title: 'DBD Cheats Reviews — Official Feedback',
     description:
-      'DBD cheats reviews and buyer feedback — official Zadeyo store, Discord, and support links. No fake ratings on this site.',
+      'DBD cheats reviews and buyer feedback — official official store, Discord, and support links. No fake ratings on this site.',
     type: 'website',
     priority: '0.85',
     changefreq: 'weekly',
     breadcrumbs: [
-      { name: 'Home', path: '/' },
+      { name: 'DBD Cheats', path: '/' },
       { name: 'DBD Cheats Reviews', path: '/reviews' },
     ],
   },
@@ -108,7 +124,7 @@ export const staticPages = [
     priority: '0.8',
     changefreq: 'weekly',
     breadcrumbs: [
-      { name: 'Home', path: '/' },
+      { name: 'DBD Cheats', path: '/' },
       { name: 'DBD Cheat Guides', path: '/blog' },
     ],
     includeBlogList: true,
@@ -168,7 +184,7 @@ export const articlePages = [
 ].map((match) => ({
   path: `/blog/${match[1]}`,
   slug: match[1],
-  title: `${match[2]} | ZADEYO`,
+  title: `${match[2]} | `,
   headline: match[2],
   description: match[3],
   category: match[4],
@@ -203,10 +219,11 @@ export function allRoutes() {
 }
 
 export function sitemapPaths() {
+  const buildLastmod = new Date().toISOString().split('T')[0]
   return [
     ...staticPages.map(({ path, priority, changefreq }) => ({
       path,
-      lastmod: siteConfig.lastUpdated,
+      lastmod: buildLastmod,
       priority,
       changefreq,
     })),
@@ -227,9 +244,17 @@ function organizationSchema(siteUrl) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: siteConfig.name,
+    '@id': `${absoluteUrl(siteUrl, '/')}#organization`,
+    name: siteConfig.seoSiteName,
+    alternateName: [siteConfig.fullName, siteConfig.name],
     url: absoluteUrl(siteUrl, '/'),
-    logo: `${siteUrl}/${siteConfig.logoFile}`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/og-logo.png`,
+      width: 512,
+      height: 512,
+      contentUrl: `${siteUrl}/og-logo.png`,
+    },
     description:
       'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check, HWID spoofer, and StreamProof.',
     sameAs: [siteConfig.discordUrl, siteConfig.zadeyoUrl, siteConfig.githubUrl],
@@ -240,17 +265,14 @@ function websiteSchema(siteUrl) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${absoluteUrl(siteUrl, '/')}#website`,
     name: siteConfig.seoSiteName,
-    alternateName: siteConfig.fullName,
+    alternateName: [siteConfig.fullName, siteConfig.name],
     url: absoluteUrl(siteUrl, '/'),
     description:
       'DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check and HWID spoofer.',
     inLanguage: 'en-US',
-    publisher: {
-      '@type': 'Organization',
-      name: siteConfig.name,
-      logo: { '@type': 'ImageObject', url: `${siteUrl}/${siteConfig.logoFile}` },
-    },
+    publisher: { '@id': `${absoluteUrl(siteUrl, '/')}#organization` },
   }
 }
 
@@ -293,7 +315,7 @@ function productSchema(siteUrl) {
       'DBD cheats for Dead by Daylight with aimbot, ESP, wallhack, World ESP, Auto Skill Check, HWID spoofer, and StreamProof.',
     sku: 'dbd-cheats-external',
     image: `${siteUrl}/og-logo.png`,
-    brand: { '@type': 'Brand', name: siteConfig.name },
+    brand: { '@type': 'Brand', name: siteConfig.seoSiteName },
     url: absoluteUrl(siteUrl, '/buy'),
     offers: [
       { label: 'Monthly', price: '35' },
@@ -307,6 +329,27 @@ function productSchema(siteUrl) {
       availability: 'https://schema.org/InStock',
       priceValidUntil: '2027-12-31',
     })),
+  }
+}
+
+function softwareApplicationSchema(siteUrl) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'DBD Cheats',
+    alternateName: siteConfig.fullName,
+    applicationCategory: 'GameApplication',
+    operatingSystem: 'Windows 10, Windows 11',
+    description:
+      'External DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, HWID spoofer, and StreamProof with instant loader delivery.',
+    url: absoluteUrl(siteUrl, '/'),
+    image: `${siteUrl}/og-logo.png`,
+    offers: {
+      '@type': 'Offer',
+      price: '35',
+      priceCurrency: 'USD',
+      url: siteConfig.checkoutUrl,
+    },
   }
 }
 
@@ -341,8 +384,8 @@ function blogItemListSchema(siteUrl) {
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Zadeyo DBD Cheat Guides',
-    description: 'Setup guides for Zadeyo DBD cheat: ESP, spoofer, loader updates, and StreamProof.',
+    name: 'DBD Cheat Guides',
+    description: 'Setup guides for DBD cheat: ESP, spoofer, loader updates, and StreamProof.',
     numberOfItems: articlePages.length,
     itemListElement: articlePages.map((article, index) => ({
       '@type': 'ListItem',
@@ -391,8 +434,8 @@ export function buildJsonLd(siteUrl, route) {
         dateModified: siteConfig.lastUpdated,
       }),
       breadcrumbSchema(siteUrl, [
-        { name: 'Home', path: '/' },
-        { name: 'Zadeyo DBD Cheat Guides', path: '/blog' },
+        { name: 'DBD Cheats', path: '/' },
+        { name: 'DBD Cheat Guides', path: '/blog' },
         { name: route.headline, path: route.path },
       ]),
       articleSchema(siteUrl, route),
@@ -411,6 +454,9 @@ export function buildJsonLd(siteUrl, route) {
   }
   if (route.includeProduct) {
     schemas.push(productSchema(siteUrl))
+  }
+  if (route.includeSoftwareApp) {
+    schemas.push(softwareApplicationSchema(siteUrl))
   }
   if (route.includeFaq) {
     schemas.push(faqSchema())

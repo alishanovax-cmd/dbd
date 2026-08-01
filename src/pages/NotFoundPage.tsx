@@ -18,7 +18,7 @@ export function NotFoundPage() {
       />
       <section className="page-placeholder">
         <SectionHeading as="h1">Page Not Found</SectionHeading>
-        <p>The page you requested does not exist. Browse Zadeyo DBD cheat guides or return home.</p>
+        <p>The page you requested does not exist. Browse DBD cheat guides or return home.</p>
         <div className="page-placeholder__actions">
           <Button href="/">Back to Home</Button>
           <Button href="/blog" variant="ghost">

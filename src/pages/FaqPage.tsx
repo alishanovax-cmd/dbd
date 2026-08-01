@@ -3,6 +3,7 @@ import { PageLayout } from '../components/layout/PageLayout'
 import { SeoHead } from '../components/seo/SeoHead'
 import { breadcrumbSchema, faqSchema, globalSchemas, webPageSchema } from '../components/seo/schema'
 import { FaqCtaSection, FaqHeroSection, FaqListSection } from '../components/sections/faq'
+import { homeNavLink } from '../data/navigation'
 import { pageSeo } from '../data/seo'
 
 export function FaqPage() {
@@ -14,16 +15,16 @@ export function FaqPage() {
           ...globalSchemas(),
           webPageSchema(pageSeo.faq.title, pageSeo.faq.description, pageSeo.faq.path),
           breadcrumbSchema([
-            { name: 'Home', path: '/' },
-            { name: 'Zadeyo DBD Cheat FAQ', path: '/faq' },
+            { name: homeNavLink.label, path: homeNavLink.href },
+            { name: 'DBD Cheats FAQ', path: '/faq' },
           ]),
           faqSchema(),
         ]}
       />
       <Breadcrumbs
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'FAQ' },
+          { label: homeNavLink.label, href: homeNavLink.href },
+          { label: 'DBD Cheats FAQ' },
         ]}
       />
       <FaqHeroSection />

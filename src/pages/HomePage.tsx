@@ -1,6 +1,6 @@
 import { PageLayout } from '../components/layout/PageLayout'
 import { SeoHead } from '../components/seo/SeoHead'
-import { faqSchema, globalSchemas, productSchema, webPageSchema } from '../components/seo/schema'
+import { breadcrumbSchema, cheatsItemListSchema, faqSchema, globalSchemas, productSchema, softwareApplicationSchema, webPageSchema } from '../components/seo/schema'
 import {
   CheatOverviewSection,
   ClusterLinksSection,
@@ -8,6 +8,7 @@ import {
   ExperienceSection,
   FeaturesSection,
   HappyClientsSection,
+  HomeSeoFaqSection,
   HeroSection,
   HowItWorksSection,
   ProductInfoSection,
@@ -27,11 +28,14 @@ export function HomePage() {
         seo={pageSeo.home}
         jsonLd={[
           ...globalSchemas(),
+          breadcrumbSchema([{ name: 'DBD Cheats', path: '/' }]),
           webPageSchema(pageSeo.home.title, pageSeo.home.description, pageSeo.home.path, {
             dateModified: siteConfig.lastUpdated,
           }),
           productSchema(),
+          softwareApplicationSchema(),
           faqSchema(),
+          cheatsItemListSchema(),
         ]}
       />
       <HeroSection />
@@ -46,6 +50,7 @@ export function HomePage() {
       <SectionDivider variant="slash" />
       <SupportSection />
       <ExperienceSection />
+      <HomeSeoFaqSection />
       <ClusterLinksSection />
       <VisualsSection />
       <HowItWorksSection />
