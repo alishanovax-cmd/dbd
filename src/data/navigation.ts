@@ -11,7 +11,7 @@ export const siteConfig = {
   zadeyoUrl: 'https://zadeyo.com',
   liveUrl: 'https://dbdcheats.net',
   githubUrl: 'https://github.com/alishanovax-cmd/dbd',
-  lastUpdated: 'July 31, 2026',
+  lastUpdated: 'August 2, 2026',
 } as const
 
 /** Authoritative outbound links — shown in footer and static HTML for crawlers. */

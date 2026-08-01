@@ -172,12 +172,20 @@ function wrapArticle(title, intro, sections, heroImage) {
 
 function homeStaticHtml(route) {
   const article = wrapArticle(
-    'DBD Cheats - Aimbot, ESP and Wallhack',
+    'DBD Cheats 2026 — Aimbot, ESP & Wallhack',
     [
       `DBD cheats for Dead by Daylight with aimbot, ESP, and wallhack. Premium external cheat with World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof from $35/month on ${link(siteConfig.zadeyoUrl, 'the official store', true)}. Browse the ${link('/cheats', 'full cheat module list')} or see ${link('/buy', 'pricing and requirements')}.`,
-      `DBD is built for players who want full wallhack coverage, exploit modules, and unlock tools in one private loader. Compatible with Steam, Epic Games, and Game Pass on Windows 10 and 11. Read the ${link('/faq', 'FAQ')} or start with the ${link('/blog/dbd-esp-guide', 'ESP setup guide')}.`,
+      `When you search for DBD cheats or Dead by Daylight cheats, you want one undetected external loader — not a stripped demo. This homepage links every module, ${link('/blog/best-dbd-cheat-2026', 'best DBD cheats guide')}, and ${link('/faq', 'FAQ')} before checkout.`,
+      `DBD is built for players who want full wallhack coverage, exploit modules, and unlock tools in one private loader. Compatible with Steam, Epic Games, and Game Pass on Windows 10 and 11. Read the ${link('/blog/dbd-esp-guide', 'ESP setup guide')} or ${link('/reviews', 'customer feedback hub')}.`,
     ],
     [
+      {
+        heading: 'DBD Cheats for Dead by Daylight — External, Undetected & Full-Feature',
+        paragraphs: [
+          `DBD cheats documented here include external ESP, wallhack, World ESP, Auto Skill Check, HWID spoofer, StreamProof, and patch-day loader updates for Dead by Daylight on PC.`,
+          `Compare ${link('/cheats', 'cheat modules')}, ${link('/buy', 'pricing')}, and ${link('/blog/best-dbd-cheat-2026', 'best DBD cheats 2026')} before you purchase through the official store.`,
+        ],
+      },
       {
         heading: 'Why Choose DBD Cheats?',
         paragraphs: [
@@ -189,9 +197,9 @@ function homeStaticHtml(route) {
       {
         heading: 'DBD Cheat — Full Feature Breakdown',
         paragraphs: [
-          `Meet the  private cheat for Dead by Daylight — external ESP, exploit modules, and unlock tools in one loader. Flexible ESP/WH customization lets you see survivors, killers, generators, exits, hatches, totems, traps, hooks, and more through walls. Configure ${link('/blog/world-esp-guide', 'World ESP')} and ${link('/blog/dbd-esp-guide', 'Player ESP')}.`,
+          `This DBD cheat is a private external cheat for Dead by Daylight — external ESP, exploit modules, and unlock tools in one loader. Flexible ESP and wallhack customization lets you see survivors, killers, generators, exits, hatches, totems, traps, hooks, and more through walls. Configure ${link('/blog/world-esp-guide', 'World ESP')} and ${link('/blog/dbd-esp-guide', 'Player ESP')}.`,
           `Included out of the box: Cosmetic Unlocker for all skins, HWID Spoofer for hardware ban protection, StreamProof for hidden overlays on OBS, Auto Skill Check, Instant Animation, SpeedHack, High Jump, FOV Changer, and saved configs. Learn about ${link('/blog/hwid-spoofer-explained', 'HWID Spoofer')} and ${link('/blog/streamproof-guide', 'StreamProof')}.`,
-          ` operates in External mode — the safest architecture for DBD. Toggle every feature individually from the menu. English menu, Menu Key bind, and Cloud-DMA support for advanced setups. Read ${link('/blog/external-cheat-architecture', 'external cheat architecture guide')}.`,
+          `The cheat operates in External mode — the safest architecture for DBD. Toggle every feature individually from the menu. English menu, Menu Key bind, and Cloud-DMA support for advanced setups. Read ${link('/blog/external-cheat-architecture', 'external cheat architecture guide')}.`,
         ],
       },
       {

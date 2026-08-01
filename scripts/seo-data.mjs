@@ -14,7 +14,7 @@ export const siteConfig = {
   zadeyoUrl: 'https://zadeyo.com',
   liveUrl: 'https://dbdcheats.net',
   githubUrl: 'https://github.com/alishanovax-cmd/dbd',
-  lastUpdated: '2026-07-31',
+  lastUpdated: '2026-08-02',
   /** Hosted at https://dbdcheats.net/{indexNowKey}.txt for IndexNow */
   indexNowKey: 'dbd7c4a9f2e18b3d6a5c9012ef8b4d7c',
 }
@@ -24,7 +24,7 @@ export const staticPages = [
     path: '/',
     title: 'DBD Cheats 2026 | Aimbot, ESP & Wallhack',
     description:
-      'Official DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Auto Skill Check & HWID spoofer. From $35/month. Setup guides & modules.',
+      'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Auto Skill Check & HWID spoofer. From $35/month. Modules, guides & instant delivery.',
     type: 'website',
     priority: '1.0',
     changefreq: 'daily',
@@ -246,7 +246,7 @@ function organizationSchema(siteUrl) {
     '@type': 'Organization',
     '@id': `${absoluteUrl(siteUrl, '/')}#organization`,
     name: siteConfig.seoSiteName,
-    alternateName: [siteConfig.fullName, siteConfig.name],
+    alternateName: [siteConfig.fullName, siteConfig.name, 'DBD cheats', 'Dead by Daylight cheats'],
     url: absoluteUrl(siteUrl, '/'),
     logo: {
       '@type': 'ImageObject',
@@ -267,7 +267,7 @@ function websiteSchema(siteUrl) {
     '@type': 'WebSite',
     '@id': `${absoluteUrl(siteUrl, '/')}#website`,
     name: siteConfig.seoSiteName,
-    alternateName: [siteConfig.fullName, siteConfig.name],
+    alternateName: [siteConfig.fullName, siteConfig.name, 'DBD cheats', 'Dead by Daylight cheats'],
     url: absoluteUrl(siteUrl, '/'),
     description:
       'DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check and HWID spoofer.',

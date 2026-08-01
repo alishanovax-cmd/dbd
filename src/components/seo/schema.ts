@@ -204,7 +204,7 @@ export function organizationSchema() {
     '@type': 'Organization',
     '@id': orgId,
     name: 'DBD Cheats',
-    alternateName: [siteConfig.fullName, siteConfig.name],
+    alternateName: [siteConfig.fullName, siteConfig.name, 'DBD cheats', 'Dead by Daylight cheats'],
     url: absoluteUrl('/'),
     logo: {
       '@type': 'ImageObject',
@@ -225,7 +225,7 @@ export function websiteSchema() {
     '@type': 'WebSite',
     '@id': `${siteRoot}#website`,
     name: 'DBD Cheats',
-    alternateName: [siteConfig.fullName, siteConfig.name],
+    alternateName: [siteConfig.fullName, siteConfig.name, 'DBD cheats', 'Dead by Daylight cheats'],
     url: absoluteUrl('/'),
     description:
       'DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check and HWID spoofer.',

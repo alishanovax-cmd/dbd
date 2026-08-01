@@ -1,3 +1,12 @@
+export const homeSeoIntro = {
+  label: 'DBD Cheats Guide',
+  title: 'DBD Cheats for Dead by Daylight — External, Undetected & Full-Feature',
+  paragraphs: [
+    'DBD cheats on this site mean one external Dead by Daylight loader with aimbot-style assistance, ESP, wallhack, World ESP, Auto Skill Check, HWID spoofer, and StreamProof — not a feature-locked demo. Use the module list, pricing page, and setup guides here before you buy.',
+    'Whether you search for DBD cheats, Dead by Daylight cheats, or ESP wallhack tools, the same stack applies: Steam, Epic, and Game Pass on Windows 10/11, patch-day loader updates, and 24/7 Discord support. Start with the best DBD cheats comparison guide or jump to checkout when you are ready.',
+  ],
+} as const
+
 export const heroContent = {
   eyebrow: 'DBD Cheats · External · Undetected',
   titleLine1: 'DBD Cheats',
@@ -23,9 +32,9 @@ export const productInfo = {
   label: 'Product Info',
   title: 'DBD Cheat — Full Feature Breakdown',
   paragraphs: [
-    'Meet the  private cheat for Dead by Daylight — external ESP, exploit modules, and unlock tools in one loader. Flexible ESP/WH customization lets you see survivors, killers, generators, exits, hatches, totems, traps, hooks, and more through walls.',
+    'This DBD cheat is a private external cheat for Dead by Daylight — ESP, exploit modules, and unlock tools in one loader. Flexible ESP and wallhack customization lets you see survivors, killers, generators, exits, hatches, totems, traps, hooks, and more through walls.',
     'Included out of the box: Cosmetic Unlocker for all skins, HWID Spoofer for hardware ban protection, StreamProof for hidden overlays on OBS, Auto Skill Check, Instant Animation, SpeedHack, High Jump, FOV Changer, and saved configs.',
-    ' operates in External mode — the safest architecture for DBD. Toggle every feature individually from the menu. English menu, Menu Key bind, and Cloud-DMA support for advanced setups.',
+    'The cheat operates in External mode — the safest architecture for DBD. Toggle every feature individually from the menu. English menu, Menu Key bind, and Cloud-DMA support for advanced setups.',
     '$35/month or $150 lifetime via checkout. Instant loader delivery. Not affiliated with Behaviour Interactive.',
   ],
 } as const

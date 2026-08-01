@@ -9,6 +9,7 @@ import {
   FeaturesSection,
   HappyClientsSection,
   HomeSeoFaqSection,
+  HomeSeoIntroSection,
   HeroSection,
   HowItWorksSection,
   ProductInfoSection,
@@ -40,6 +41,7 @@ export function HomePage() {
       />
       <HeroSection />
       <SectionDivider variant="wave" />
+      <HomeSeoIntroSection />
       <WhyChooseSection />
       <ProductInfoSection />
       <SectionDivider variant="dots" />

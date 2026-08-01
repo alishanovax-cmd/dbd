@@ -27,7 +27,7 @@ export const logoDimensions = { width: 512, height: 512 } as const
 export const homeSeo = {
   title: 'DBD Cheats 2026 | Aimbot, ESP & Wallhack',
   description:
-    'Official DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Auto Skill Check & HWID spoofer. From $35/month. Setup guides & modules.',
+    'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Auto Skill Check & HWID spoofer. From $35/month. Modules, guides & instant delivery.',
   siteName: 'DBD Cheats',
 } as const
 
@@ -106,7 +106,7 @@ export const pageSeo = {
   reviews: {
     title: 'DBD Cheats Reviews — Official Feedback',
     description:
-      'DBD cheats reviews and buyer feedback — official official store, Discord, and support links. No fake ratings on this site.',
+      'DBD cheats reviews and buyer feedback — official store, Discord, and support links. No fake ratings on this site.',
     path: '/reviews',
     type: 'website',
   },
