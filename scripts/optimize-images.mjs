@@ -34,25 +34,58 @@ async function optimize() {
   const logoWebp = join(root, 'public/zadeyo-logo.webp')
   if (existsSync(logoWebp)) {
     const logo = sharp(logoWebp)
-    const faviconBg = { r: 6, g: 4, b: 9, alpha: 1 }
-    const faviconOpts = { fit: 'contain', background: faviconBg }
 
-    await logo.clone().resize(48, 48, faviconOpts).png().toFile(join(root, 'public/favicon-48.png'))
-    const icoSizes = await Promise.all(
-      [16, 32, 48].map((size) =>
-        logo.clone().resize(size, size, faviconOpts).png().toBuffer(),
-      ),
-    )
+    /** White square favicons — purple Z reads clearly in Google’s circular SERP icon. */
+    async function writeFaviconSquare(size, outPath) {
+      const inset = Math.round(size * 0.14)
+      const inner = Math.max(8, size - inset * 2)
+      const mark = await logo
+        .clone()
+        .resize(inner, inner, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 0 } })
+        .png()
+        .toBuffer()
+      await sharp({
+        create: {
+          width: size,
+          height: size,
+          channels: 4,
+          background: { r: 255, g: 255, b: 255, alpha: 1 },
+        },
+      })
+        .composite([{ input: mark, gravity: 'center' }])
+        .png()
+        .toFile(outPath)
+    }
+
+    async function faviconSquareBuffer(size) {
+      const inset = Math.round(size * 0.14)
+      const inner = Math.max(8, size - inset * 2)
+      const mark = await logo
+        .clone()
+        .resize(inner, inner, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 0 } })
+        .png()
+        .toBuffer()
+      return sharp({
+        create: {
+          width: size,
+          height: size,
+          channels: 4,
+          background: { r: 255, g: 255, b: 255, alpha: 1 },
+        },
+      })
+        .composite([{ input: mark, gravity: 'center' }])
+        .png()
+        .toBuffer()
+    }
+
+    await writeFaviconSquare(48, join(root, 'public/favicon-48.png'))
+    const icoSizes = await Promise.all([16, 32, 48].map((size) => faviconSquareBuffer(size)))
     writeFileSync(join(root, 'public/favicon.ico'), await toIco(icoSizes))
-    await logo.clone().resize(96, 96, faviconOpts).png().toFile(join(root, 'public/favicon-96.png'))
-    await logo.clone().resize(192, 192, faviconOpts).png().toFile(join(root, 'public/favicon-192.png'))
-    await logo.clone().resize(180, 180, faviconOpts).png().toFile(join(root, 'public/apple-touch-icon.png'))
-    await logo
-      .clone()
-      .resize(512, 512, faviconOpts)
-      .png()
-      .toFile(join(root, 'public/og-logo.png'))
-    console.log('Generated brand favicons (48–192px) and og-logo.png for Google Search')
+    await writeFaviconSquare(96, join(root, 'public/favicon-96.png'))
+    await writeFaviconSquare(192, join(root, 'public/favicon-192.png'))
+    await writeFaviconSquare(180, join(root, 'public/apple-touch-icon.png'))
+    await writeFaviconSquare(512, join(root, 'public/og-logo.png'))
+    console.log('Generated white-background Zadeyo favicons for Google Search')
   }
 
   const posterSrc = join(root, 'src/assets/images/hero-huntress-poster.jpg')
