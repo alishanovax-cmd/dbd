@@ -67,9 +67,9 @@ export function Footer() {
                 {siteConfig.tagline} for DBD
               </h2>
               <p className="site-footer__pitch">
-                private external DBD cheat for Dead by Daylight — World ESP, Box ESP, Auto Skill Check,
-                SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof. Instant loader delivery at
-                checkout.
+                <Link to="/">DBD cheats</Link> for Dead by Daylight on dbdcheats.net — private external cheat with World
+                ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof. Instant
+                loader delivery at checkout.
               </p>
               <div className="site-footer__stats">
                 {footerStats.map((stat) => (

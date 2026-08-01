@@ -22,6 +22,13 @@ ${urls.join('\n')}
 const robots = `User-agent: *
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /favicon.ico
+Allow: /favicon-48.png
+Allow: /favicon-96.png
+Allow: /favicon-192.png
+Allow: /og-logo.png
+
 Sitemap: ${siteUrl}/sitemap.xml
 `
 

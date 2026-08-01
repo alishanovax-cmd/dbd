@@ -50,11 +50,11 @@ export const staticPages = [
   },
   {
     path: '/cheats',
-    title: 'DBD Cheats — ESP, Wallhack & Aimbot Modules',
+    title: 'DBD Cheats 2026 | ESP, Wallhack & Aimbot Modules',
     description:
-      'DBD cheats module list — Player ESP, World ESP wallhack, aimbot, Auto Skill Check, SpeedHack, HWID Spoofer, StreamProof, and external cheat architecture.',
+      'DBD cheats module list for Dead by Daylight — Player ESP, World ESP wallhack, aimbot, Auto Skill Check, SpeedHack, HWID Spoofer, StreamProof, and external cheat architecture.',
     type: 'website',
-    priority: '0.9',
+    priority: '0.95',
     changefreq: 'weekly',
     breadcrumbs: [
       { name: 'DBD Cheats', path: '/' },
