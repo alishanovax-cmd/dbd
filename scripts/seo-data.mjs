@@ -22,9 +22,9 @@ export const siteConfig = {
 export const staticPages = [
   {
     path: '/',
-    title: 'DBD Cheats 2026 | Aimbot, ESP & Wallhack',
+    title: 'DBD Cheats | Dead by Daylight Cheats 2026 — Aimbot, ESP & Wallhack',
     description:
-      'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Auto Skill Check & HWID spoofer. From $35/month. Modules, guides & instant delivery.',
+      'DBD cheats for Dead by Daylight — undetected external aimbot, ESP, wallhack, World ESP, Auto Skill Check & HWID spoofer. From $35/month on dbdcheats.net. Guides & instant delivery.',
     type: 'website',
     priority: '1.0',
     changefreq: 'daily',

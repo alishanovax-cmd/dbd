@@ -25,10 +25,12 @@ export const ogImageDimensions = { width: 1025, height: 1300 } as const
 export const logoDimensions = { width: 512, height: 512 } as const
 
 export const homeSeo = {
-  title: 'DBD Cheats 2026 | Aimbot, ESP & Wallhack',
+  title: 'DBD Cheats | Dead by Daylight Cheats 2026 — Aimbot, ESP & Wallhack',
   description:
-    'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Auto Skill Check & HWID spoofer. From $35/month. Modules, guides & instant delivery.',
+    'DBD cheats for Dead by Daylight — undetected external aimbot, ESP, wallhack, World ESP, Auto Skill Check & HWID spoofer. From $35/month on dbdcheats.net. Guides & instant delivery.',
   siteName: 'DBD Cheats',
+  keywords:
+    'dbd cheats, dead by daylight cheats, dbd aimbot, dbd esp, dbd wallhack, dbd hacks, dbd cheat, dead by daylight hack',
 } as const
 
 export function absoluteUrl(path: string): string {

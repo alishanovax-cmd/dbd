@@ -1,7 +1,7 @@
 import { faqs, pricingPlans } from '../../data/content'
 import type { BlogArticle } from '../../data/blogArticles'
 import { blogArticles } from '../../data/blogArticles'
-import { absoluteAssetUrl, absoluteUrl } from '../../data/seo'
+import { absoluteAssetUrl, absoluteUrl, homeSeo } from '../../data/seo'
 import { siteConfig } from '../../data/navigation'
 
 const siteRoot = absoluteUrl('/').replace(/\/$/, '')
@@ -215,22 +215,29 @@ export function organizationSchema() {
     },
     description:
       'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check, HWID spoofer, and StreamProof.',
-    sameAs: [siteConfig.discordUrl, siteConfig.zadeyoUrl, siteConfig.githubUrl],
+    sameAs: [siteConfig.liveUrl, siteConfig.discordUrl, siteConfig.zadeyoUrl, siteConfig.githubUrl],
   }
 }
 
 export function websiteSchema() {
+  const homeUrl = absoluteUrl('/')
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${siteRoot}#website`,
     name: 'DBD Cheats',
     alternateName: [siteConfig.fullName, siteConfig.name, 'DBD cheats', 'Dead by Daylight cheats'],
-    url: absoluteUrl('/'),
+    url: homeUrl,
     description:
       'DBD cheats for Dead by Daylight — aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check and HWID spoofer.',
     inLanguage: 'en-US',
     publisher: { '@id': `${siteRoot}#organization` },
+    mainEntity: {
+      '@type': 'WebPage',
+      '@id': `${homeUrl}#webpage`,
+      name: homeSeo.title,
+      url: homeUrl,
+    },
   }
 }
 

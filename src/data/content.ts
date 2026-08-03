@@ -265,7 +265,12 @@ export const features = [
 
 export const faqs = [
   {
-    question: 'Are DBD cheat undetected?',
+    question: 'What are DBD cheats?',
+    answer:
+      'DBD cheats are third-party tools for Dead by Daylight on PC that add ESP, wallhack, aimbot-style assistance (Auto Skill Check), exploit modules, HWID spoofer, and StreamProof through an external loader. This site documents every module, pricing, and setup guides for dbdcheats.net before checkout.',
+  },
+  {
+    question: 'Are DBD cheats undetected?',
     answer:
       'The cheat is described as its build as undetected with regular updates, but no cheat can guarantee that. External architecture reduces risk compared to internal injectors — see Behaviour patch notes and Discord for current status.',
   },

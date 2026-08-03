@@ -67,6 +67,9 @@ export function SeoHead({ seo, jsonLd }: SeoHeadProps) {
 
     upsertMeta('description', seo.description)
     upsertMeta('author', seo.path === '/' ? homeSeo.siteName : siteConfig.fullName)
+    if (seo.path === '/') {
+      upsertMeta('keywords', homeSeo.keywords)
+    }
     upsertMeta('robots', seo.noindex ? 'noindex, nofollow' : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1')
 
     upsertMeta('og:title', seo.title, true)

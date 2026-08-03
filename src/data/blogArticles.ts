@@ -231,7 +231,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'best-dbd-cheat-2026',
-    title: 'Best DBD Cheats 2026 — Compare ESP, Wallhack & Pricing',
+    title: 'DBD Cheats: Best Options 2026 — Compare ESP, Wallhack & Pricing',
     excerpt:
       'Best DBD cheats compared for Dead by Daylight — external ESP, wallhack, full module list, and $35/month pricing on dbdcheats.net.',
     category: 'comparison',
@@ -310,7 +310,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'behaviour-anticheat-analysis',
-    title: 'DBD Anti-Cheat vs External DBD Cheats Cheat',
+    title: 'DBD Anti-Cheat vs External DBD Cheats',
     excerpt: 'Why DBD Cheats external architecture beats internal injectors for DBD safety.',
     category: 'anti-cheat',
     date: 'Mar 20, 2025',

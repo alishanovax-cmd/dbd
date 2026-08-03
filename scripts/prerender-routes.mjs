@@ -38,6 +38,7 @@ function escapeAttr(value) {
 function stripSeoTags(html) {
   return html
     .replace(/<meta name="description"[\s\S]*?>\s*/g, '')
+    .replace(/<meta name="keywords"[\s\S]*?>\s*/g, '')
     .replace(/<meta name="author"[\s\S]*?>\s*/g, '')
     .replace(/<meta name="robots"[\s\S]*?>\s*/g, '')
     .replace(/<meta property="og:[^"]+"[\s\S]*?>\s*/g, '')
@@ -105,9 +106,13 @@ function injectSeo(html, route) {
       ? 'summary'
       : 'summary_large_image'
   const pageAuthor = route.siteName ?? siteConfig.seoSiteName
+  const keywordsMeta =
+    route.path === '/'
+      ? `\n    <meta name="keywords" content="${escapeAttr('dbd cheats, dead by daylight cheats, dbd aimbot, dbd esp, dbd wallhack, dbd hacks, dbd cheat, dead by daylight hack')}" />`
+      : ''
 
   const seoBlock = `
-    <meta name="description" content="${escapeAttr(route.description)}" />
+    <meta name="description" content="${escapeAttr(route.description)}" />${keywordsMeta}
     <meta name="author" content="${escapeAttr(pageAuthor)}" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta property="og:title" content="${escapeAttr(route.title)}" />

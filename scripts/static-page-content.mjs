@@ -178,7 +178,7 @@ function wrapArticle(title, intro, sections, heroImage, titleLevel = 'h1') {
 
 function homeStaticHtml(route) {
   const article = wrapArticle(
-    'DBD Cheats 2026 — Aimbot, ESP & Wallhack',
+    'DBD Cheats | Dead by Daylight Cheats 2026 — Aimbot, ESP & Wallhack',
     [
       `DBD cheats for Dead by Daylight with aimbot, ESP, and wallhack. Premium external cheat with World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof from $35/month on ${link(siteConfig.zadeyoUrl, 'the official store', true)}. Browse the ${link('/cheats', 'full cheat module list')} or see ${link('/buy', 'pricing and requirements')}.`,
       `When you search for DBD cheats or Dead by Daylight cheats, you want one undetected external loader — not a stripped demo. This homepage links every module, ${link('/blog/best-dbd-cheat-2026', 'best DBD cheats guide')}, and ${link('/faq', 'FAQ')} before checkout.`,
