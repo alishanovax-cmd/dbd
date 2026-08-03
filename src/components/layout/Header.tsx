@@ -27,16 +27,28 @@ export function Header() {
         </Link>
 
         <nav className="site-header__nav hidden items-center gap-8 md:flex" aria-label="Main navigation">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.href}
-              to={link.href}
-              end={link.href === '/'}
-              className={({ isActive }) => `nav-link ${isActive ? 'is-active' : ''}`}
-            >
-              {link.label}
-            </NavLink>
-          ))}
+          {navLinks.map((link) =>
+            'external' in link && link.external ? (
+              <a
+                key={link.label}
+                href={link.href}
+                className="nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <NavLink
+                key={link.href}
+                to={link.href}
+                end={link.href === '/'}
+                className={({ isActive }) => `nav-link ${isActive ? 'is-active' : ''}`}
+              >
+                {link.label}
+              </NavLink>
+            ),
+          )}
         </nav>
 
         <div className="site-header__actions flex items-center gap-2 sm:gap-3">
@@ -80,17 +92,30 @@ export function Header() {
 
       {menuOpen && (
         <nav className="mobile-nav md:hidden" aria-label="Mobile navigation">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.href}
-              to={link.href}
-              end={link.href === '/'}
-              className={({ isActive }) => `mobile-nav__link ${isActive ? 'is-active' : ''}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </NavLink>
-          ))}
+          {navLinks.map((link) =>
+            'external' in link && link.external ? (
+              <a
+                key={link.label}
+                href={link.href}
+                className="mobile-nav__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <NavLink
+                key={link.href}
+                to={link.href}
+                end={link.href === '/'}
+                className={({ isActive }) => `mobile-nav__link ${isActive ? 'is-active' : ''}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </NavLink>
+            ),
+          )}
           <Button
             href={siteConfig.checkoutUrl}
             external

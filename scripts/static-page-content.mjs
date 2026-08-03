@@ -8,7 +8,7 @@ const buySource = readFileSync('src/data/buyContent.ts', 'utf8')
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/cheats', label: 'Cheats' },
-  { href: '/buy', label: 'Buy' },
+  { href: siteConfig.checkoutUrl, label: 'Buy', external: true },
   { href: '/reviews', label: 'Reviews' },
   { href: '/faq', label: 'FAQ' },
   { href: '/blog', label: 'Blog' },
@@ -75,7 +75,7 @@ function staticNavHtml(currentPath) {
   const items = navLinks
     .map(
       (item) =>
-        `<li><a href="${escapeHtml(item.href)}"${item.href === currentPath ? ' aria-current="page"' : ''}>${escapeHtml(item.label)}</a></li>`,
+        `<li><a href="${escapeHtml(item.href)}"${item.external ? ' target="_blank" rel="noopener noreferrer"' : ''}${item.href === currentPath ? ' aria-current="page"' : ''}>${escapeHtml(item.label)}</a></li>`,
     )
     .join('\n          ')
 
@@ -89,7 +89,7 @@ function staticNavHtml(currentPath) {
 function staticExploreHtml(currentPath) {
   const pageLinks = navLinks
     .filter((item) => item.href !== currentPath)
-    .map((item) => `<li>${link(item.href, item.label)}</li>`)
+    .map((item) => `<li>${link(item.href, item.label, Boolean(item.external))}</li>`)
     .join('\n            ')
 
   const guideLinks = articlePages
@@ -98,7 +98,7 @@ function staticExploreHtml(currentPath) {
     .join('\n            ')
 
   const topicLinks = keywordLinks
-    .map((item) => `<li>${link(item.href, item.label)}</li>`)
+    .map((item) => `<li>${link(item.href, item.label, Boolean(item.external))}</li>`)
     .join('\n            ')
 
   const outboundLinks = externalLinks
@@ -180,7 +180,7 @@ function homeStaticHtml(route) {
   const article = wrapArticle(
     'DBD Cheats | Dead by Daylight Cheats 2026 — Aimbot, ESP & Wallhack',
     [
-      `DBD cheats for Dead by Daylight with aimbot, ESP, and wallhack. Premium external cheat with World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof from $35/month on ${link(siteConfig.zadeyoUrl, 'the official store', true)}. Browse the ${link('/cheats', 'full cheat module list')} or see ${link('/buy', 'pricing and requirements')}.`,
+      `DBD cheats for Dead by Daylight with aimbot, ESP, and wallhack. Premium external cheat with World ESP, Box ESP, Auto Skill Check, SpeedHack, Cosmetic Unlocker, HWID Spoofer, and StreamProof from $35/month on ${link(siteConfig.zadeyoUrl, 'the official store', true)}. Browse the ${link('/cheats', 'full cheat module list')} or see ${link(siteConfig.checkoutUrl, 'pricing and requirements', true)}.`,
       `When you search for DBD cheats or Dead by Daylight cheats, you want one undetected external loader — not a stripped demo. This homepage links every module, ${link('/blog/best-dbd-cheat-2026', 'best DBD cheats guide')}, and ${link('/faq', 'FAQ')} before checkout.`,
       `DBD is built for players who want full wallhack coverage, exploit modules, and unlock tools in one private loader. Compatible with Steam, Epic Games, and Game Pass on Windows 10 and 11. Read the ${link('/blog/dbd-esp-guide', 'ESP setup guide')} or ${link('/reviews', 'customer feedback hub')}.`,
     ],
@@ -189,7 +189,7 @@ function homeStaticHtml(route) {
         heading: 'DBD Cheats for Dead by Daylight — External, Undetected & Full-Feature',
         paragraphs: [
           `DBD cheats documented here include external ESP, wallhack, World ESP, Auto Skill Check, HWID spoofer, StreamProof, and patch-day loader updates for Dead by Daylight on PC.`,
-          `Compare ${link('/cheats', 'cheat modules')}, ${link('/buy', 'pricing')}, and ${link('/blog/best-dbd-cheat-2026', 'best DBD cheats 2026')} before you purchase through the official store.`,
+          `Compare ${link('/cheats', 'cheat modules')}, ${link(siteConfig.checkoutUrl, 'pricing', true)}, and ${link('/blog/best-dbd-cheat-2026', 'best DBD cheats 2026')} before you purchase through the official store.`,
         ],
       },
       {
@@ -197,7 +197,7 @@ function homeStaticHtml(route) {
         paragraphs: [
           `DBD is a private external cheat built for reliability, safety, and full feature coverage at $35/month or $150 lifetime. External mode keeps the overlay outside the game process — significantly lower detection risk than internal cheats. Compare options on the ${link('/reviews', 'customer feedback hub')}.`,
           `Every subscription includes loader updates, HWID Spoofer, Cosmetic Unlocker, Cloud-DMA option, and 24/7 Discord support. Updates ship fast after every DBD patch so your build never falls behind. See ${link('/blog/staying-updated-after-patches', 'loader update guide')}.`,
-          `Buy once through checkout, download instantly, and configure ESP colors, exploit toggles, and StreamProof from a clean in-game menu. No feature tiers — the full cheat suite is included. ${link('/buy', 'Purchase DBD Cheat')}.`,
+          `Buy once through checkout, download instantly, and configure ESP colors, exploit toggles, and StreamProof from a clean in-game menu. No feature tiers — the full cheat suite is included. ${link(siteConfig.checkoutUrl, 'Purchase DBD Cheat', true)}.`,
         ],
       },
       {
@@ -238,7 +238,7 @@ function faqStaticHtml(route) {
 
   const article = `<article class="static-page-content">
       ${h1('DBD Cheat FAQ')}
-      ${pHtml(`${escapeHtml(route.description)} Need modules or pricing? Visit ${link('/cheats', 'cheat modules')} and ${link('/buy', 'buy page')}.`)}
+      ${pHtml(`${escapeHtml(route.description)} Need modules or pricing? Visit ${link('/cheats', 'cheat modules')} and ${link(siteConfig.checkoutUrl, 'buy page', true)}.`)}
       ${items}
     </article>`
 
@@ -248,7 +248,7 @@ function faqStaticHtml(route) {
 function cheatsStaticHtml(route) {
   const article = `<article class="static-page-content">
       ${h1('DBD Cheats — Full Module Breakdown')}
-      ${pHtml(`${escapeHtml(route.description)} Ready to purchase? See ${link('/buy', 'pricing')} or read ${link('/blog/dbd-beginners-guide', 'setup guide')}.`)}
+      ${pHtml(`${escapeHtml(route.description)} Ready to purchase? See ${link(siteConfig.checkoutUrl, 'pricing', true)} or read ${link('/blog/dbd-beginners-guide', 'setup guide')}.`)}
       ${cheatsModuleSections()}
     </article>`
 
@@ -293,7 +293,7 @@ function articleStaticHtml(route) {
 
   const article = `<article class="static-page-content">
       ${h1(route.headline)}
-      ${pHtml(`${escapeHtml(route.description)} ${link('/blog', 'All DBD cheat guides')} · ${link('/cheats', 'Cheat modules')} · ${link('/buy', 'Buy DBD')}.`)}
+      ${pHtml(`${escapeHtml(route.description)} ${link('/blog', 'All DBD cheat guides')} · ${link('/cheats', 'Cheat modules')} · ${link(siteConfig.checkoutUrl, 'Buy DBD', true)}.`)}
       ${body}
       <section class="static-page-related">
         <h2>Related DBD Guides</h2>
@@ -308,8 +308,8 @@ function genericStaticHtml(route) {
   const article = `<article class="static-page-content">
       ${h1(route.title.replace(/\s\|\s$/, ''))}
       ${p(route.description)}
-      ${pHtml(`DBD Cheats is an independent resource for Dead by Daylight external cheat features, setup guides, pricing, compatibility notes, and support links. Explore ${link('/cheats', 'cheat modules')}, ${link('/buy', 'purchase options')}, ${link('/faq', 'FAQ answers')}, and ${link('/blog', 'blog guides')}.`)}
-      ${pHtml(`All subscriptions include external ESP, World ESP wallhack, exploit modules, HWID Spoofer, Cosmetic Unlocker, StreamProof, loader updates, and Discord support. Visit the ${link('/buy', 'buy page')} for pricing or the ${link('/cheats', 'cheats page')} for the full module list.`)}
+      ${pHtml(`DBD Cheats is an independent resource for Dead by Daylight external cheat features, setup guides, pricing, compatibility notes, and support links. Explore ${link('/cheats', 'cheat modules')}, ${link(siteConfig.checkoutUrl, 'purchase options', true)}, ${link('/faq', 'FAQ answers')}, and ${link('/blog', 'blog guides')}.`)}
+      ${pHtml(`All subscriptions include external ESP, World ESP wallhack, exploit modules, HWID Spoofer, Cosmetic Unlocker, StreamProof, loader updates, and Discord support. Visit the ${link(siteConfig.checkoutUrl, 'buy page', true)} for pricing or the ${link('/cheats', 'cheats page')} for the full module list.`)}
     </article>`
 
   return wrapStaticPage(route, article)

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { faqs } from '../../data/content'
+import { siteConfig } from '../../data/navigation'
 import { ScrollReveal } from '../ui/ScrollReveal'
 import { SectionHeading } from '../ui/SectionHeading'
 
@@ -18,7 +19,11 @@ export function HomeSeoFaqSection() {
           <p className="body-text faq-page__intro">
             DBD cheats for Dead by Daylight on PC — external aimbot, ESP, wallhack, World ESP, Auto Skill Check,
             HWID spoofer, and StreamProof. Read quick answers below, then explore{' '}
-            <Link to="/cheats">cheat modules</Link>, <Link to="/buy">pricing</Link>, and the{' '}
+            <Link to="/cheats">cheat modules</Link>,{' '}
+            <a href={siteConfig.checkoutUrl} target="_blank" rel="noopener noreferrer">
+              pricing
+            </a>
+            , and the{' '}
             <Link to="/blog/best-dbd-cheat-2026">best DBD cheats guide</Link>.
           </p>
         </ScrollReveal>

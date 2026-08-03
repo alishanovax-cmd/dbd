@@ -1,3 +1,5 @@
+import { siteConfig } from './navigation'
+
 export const homeSeoIntro = {
   label: 'DBD Cheats Guide',
   title: 'DBD Cheats for Dead by Daylight — External, Undetected & Full-Feature',
@@ -105,7 +107,7 @@ export const experienceSection = {
 
 export const clusterLinks = [
   { label: 'DBD cheat modules', href: '/cheats' },
-  { label: 'Buy DBD Cheats — $35/month', href: '/buy', external: true },
+  { label: 'Buy DBD Cheats — $35/month', href: siteConfig.checkoutUrl, external: true },
   { label: 'Customer feedback hub', href: '/reviews' },
   { label: 'DBD cheat FAQ', href: '/faq' },
   { label: 'DBD ESP setup guide', href: '/blog/dbd-esp-guide' },

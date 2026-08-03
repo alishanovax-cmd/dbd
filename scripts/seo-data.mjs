@@ -10,7 +10,7 @@ export const siteConfig = {
     'DBD cheats for Dead by Daylight — external aimbot, ESP, wallhack, World ESP, Box ESP, Auto Skill Check, HWID spoofer, and StreamProof. From $35/month.',
   discordUrl: 'https://discord.gg/zadeyo',
   supportUrl: 'https://zadeyo.com/support',
-  checkoutUrl: 'https://zadeyo.com/go/38e76e09?to=%2Fproducts%2Fdbd',
+  checkoutUrl: 'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fdbd',
   zadeyoUrl: 'https://zadeyo.com',
   liveUrl: 'https://dbdcheats.net',
   githubUrl: 'https://github.com/alishanovax-cmd/dbd',
