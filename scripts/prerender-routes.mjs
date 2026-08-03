@@ -28,7 +28,11 @@ function readOgDimensions() {
 const ogDimensions = readOgDimensions()
 
 function escapeAttr(value) {
-  return value.replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/\u2014/g, '&#8212;')
+    .replace(/\u2013/g, '&#8211;')
 }
 
 function stripSeoTags(html) {

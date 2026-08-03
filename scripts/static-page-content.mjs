@@ -45,6 +45,8 @@ function escapeHtml(value) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
+    .replace(/\u2014/g, '&#8212;')
+    .replace(/\u2013/g, '&#8211;')
 }
 
 function p(text) {
@@ -157,13 +159,17 @@ function buyFeatureDescriptions() {
   )
 }
 
-function wrapArticle(title, intro, sections, heroImage) {
+function wrapArticle(title, intro, sections, heroImage, titleLevel = 'h1') {
   const hero = heroImage
     ? `<img src="${heroImage.src}" alt="${escapeHtml(heroImage.alt)}" width="${heroImage.width}" height="${heroImage.height}" fetchpriority="high" decoding="sync" />`
     : ''
+  const titleHtml =
+    titleLevel === 'h2'
+      ? `<h2 class="static-page-content__title">${escapeHtml(title)}</h2>`
+      : h1(title)
 
   return `<article class="static-page-content">
-      ${h1(title)}
+      ${titleHtml}
       ${intro.map(pHtml).join('\n      ')}
       ${hero}
       ${sections.map((section) => `${h2(section.heading)}${section.paragraphs.map(pHtml).join('\n      ')}`).join('\n      ')}
@@ -216,6 +222,7 @@ function homeStaticHtml(route) {
       width: 1200,
       height: 503,
     },
+    'h2',
   )
 
   return wrapStaticPage(route, article)

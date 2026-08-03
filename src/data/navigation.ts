@@ -12,6 +12,7 @@ export const siteConfig = {
   liveUrl: 'https://dbdcheats.net',
   githubUrl: 'https://github.com/alishanovax-cmd/dbd',
   lastUpdated: 'August 2, 2026',
+  lastUpdatedIso: '2026-08-02',
 } as const
 
 /** Authoritative outbound links — shown in footer and static HTML for crawlers. */

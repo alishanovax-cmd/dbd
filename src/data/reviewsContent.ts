@@ -6,7 +6,7 @@ export const reviewsPage = {
     titleLine1: 'Customer Feedback',
     titleLine2: 'Official Channels',
     description:
-      'This site does not host fabricated reviews or inflated ratings. For real buyer feedback, use the official official store listing, Discord community, and support portal.',
+      'This site does not host fabricated reviews or inflated ratings. For real buyer feedback, use the official store listing, Discord community, and support portal.',
   },
   channels: {
     label: 'Where to check feedback',
@@ -17,7 +17,7 @@ export const reviewsPage = {
       {
         title: 'official store Listing',
         description:
-          'Product details, pricing, and checkout are on the official official store. Check the store page for any buyer feedback shown there.',
+          'Product details, pricing, and checkout are on the official store. Check the store page for any buyer feedback shown there.',
         href: siteConfig.checkoutUrl,
         external: true,
         cta: 'Open official store',
@@ -52,6 +52,6 @@ export const reviewsPage = {
   },
   cta: {
     title: 'Ready to Check Out?',
-    description: 'Review features on this site, then confirm pricing and checkout on the official official store.',
+    description: 'Review features on this site, then confirm pricing and checkout on the official store.',
   },
 } as const

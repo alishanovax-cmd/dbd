@@ -106,7 +106,7 @@ export const staticPages = [
     path: '/reviews',
     title: 'DBD Cheats Reviews — Official Feedback',
     description:
-      'DBD cheats reviews and buyer feedback — official official store, Discord, and support links. No fake ratings on this site.',
+      'DBD cheats reviews and buyer feedback — official store, Discord, and support links. No fake ratings on this site.',
     type: 'website',
     priority: '0.85',
     changefreq: 'weekly',
@@ -177,22 +177,30 @@ export function resolveBuiltAssetUrl(siteUrl, prefix) {
   return `${siteUrl}/og-image.jpg`
 }
 
-export const articlePages = [
-  ...blogSource.matchAll(
-    /slug: '([^']+)'[\s\S]*?title: '([^']+)'[\s\S]*?excerpt: '([^']+)'[\s\S]*?category: '([^']+)'[\s\S]*?date: '([^']+)'/g,
-  ),
-].map((match) => ({
-  path: `/blog/${match[1]}`,
-  slug: match[1],
-  title: `${match[2]} | `,
-  headline: match[2],
-  description: match[3],
-  category: match[4],
-  date: match[5],
-  type: 'article',
-  priority: '0.7',
-  changefreq: 'monthly',
-}))
+function parseArticlePagesFromBlogSource(source) {
+  const pages = []
+  const re =
+    /slug: '([^']+)'[\s\S]*?title: '((?:\\'|[^'])*)'[\s\S]*?excerpt:\s*(?:'((?:\\'|[^'])*)'|\n\s*'((?:\\'|[^'])*)')[\s\S]*?category: '([^']+)'[\s\S]*?date: '([^']+)'/g
+  for (const match of source.matchAll(re)) {
+    const headline = match[2].replace(/\\'/g, "'")
+    const description = (match[3] || match[4]).replace(/\\'/g, "'")
+    pages.push({
+      path: `/blog/${match[1]}`,
+      slug: match[1],
+      title: `${headline} | `,
+      headline,
+      description,
+      category: match[5],
+      date: match[6],
+      type: 'article',
+      priority: '0.7',
+      changefreq: 'monthly',
+    })
+  }
+  return pages
+}
+
+export const articlePages = parseArticlePagesFromBlogSource(blogSource)
 
 export function getSiteUrl() {
   return (process.env.VITE_SITE_URL ?? process.env.SITE_URL ?? 'https://dbdcheats.net').replace(/\/$/, '')

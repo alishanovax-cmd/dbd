@@ -198,7 +198,7 @@ export function Footer() {
 
         <div className="site-footer__bar">
           <p className="site-footer__updated">
-            Content last reviewed: <time dateTime="2026-07-24">{siteConfig.lastUpdated}</time>
+            Content last reviewed: <time dateTime={siteConfig.lastUpdatedIso}>{siteConfig.lastUpdated}</time>
           </p>
           <div className="site-footer__bar-divider" aria-hidden="true" />
           <p className="site-footer__copy">
