@@ -270,9 +270,14 @@ export const faqs = [
       'DBD cheats are third-party tools for Dead by Daylight on PC that add ESP, wallhack, aimbot-style assistance (Auto Skill Check), exploit modules, HWID spoofer, and StreamProof through an external loader. This site documents every module, pricing, and setup guides for dbdcheats.net before checkout.',
   },
   {
+    question: 'Where can I buy DBD cheats?',
+    answer:
+      'Use the official store checkout linked from dbdcheats.net — full module list on the cheats page, pricing on buy, and setup guides in the blog. Search “DBD cheats” and compare features here before you purchase.',
+  },
+  {
     question: 'Are DBD cheats undetected?',
     answer:
-      'The cheat is described as its build as undetected with regular updates, but no cheat can guarantee that. External architecture reduces risk compared to internal injectors — see Behaviour patch notes and Discord for current status.',
+      'The loader is maintained as undetected with regular updates, but no cheat can guarantee that. External architecture reduces risk compared to internal injectors — see Behaviour patch notes and Discord for current status.',
   },
   {
     question: 'What is the Cosmetic Unlocker?',

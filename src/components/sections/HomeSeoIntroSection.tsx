@@ -11,11 +11,15 @@ export function HomeSeoIntroSection() {
           <span className="section-label">{homeSeoIntro.label}</span>
           <SectionHeading as="h2">{homeSeoIntro.title}</SectionHeading>
           <span className="accent-line" />
-          {homeSeoIntro.paragraphs.map((p) => (
-            <p key={p.slice(0, 48)} className="body-text">
-              {p}
-            </p>
-          ))}
+          <p className="body-text">{homeSeoIntro.paragraphs[0]}</p>
+          <p className="body-text">
+            Whether you search for{' '}
+            <Link to="/">DBD cheats</Link>, <Link to="/cheats">Dead by Daylight cheats</Link>, or{' '}
+            <Link to="/blog/dbd-esp-guide">ESP wallhack</Link> tools, the same stack applies: Steam,
+            Epic, and Game Pass on Windows 10/11, patch-day loader updates, and 24/7 Discord support.
+            Start with the <Link to="/blog/best-dbd-cheat-2026">best DBD cheats</Link> comparison
+            guide or <Link to="/buy">buy DBD cheats</Link> when you are ready.
+          </p>
           <p className="body-text home-seo-intro__links">
             <Link to="/cheats">DBD cheat modules</Link>
             {' · '}
